@@ -1,0 +1,42 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: url("http://s1.1zoom.me/b4949/396/Apples_Water_Spray_511501_360x640.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.header {
+    box-shadow: 0px 3px 4px 0px grey;
+    background-color: black;
+}
+.logo {
+    font-size: 60px;
+    font-family: fantasy;
+    color: maroon;
+    font-weight: bold;
+}
+nav ul {
+    font-size: 30px;
+    list-style: none;
+    display: inline-flex;
+}
+nav ul li {
+    padding: 0px 10px;
+    border: 1px solid black;
+}
+h4 {
+    padding: 0px 10px;
+    float:right;
+}
+.main-menu {
+    list-style: none;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: sans-serif;
+    padding: 0px;
+}
+.main-menu li {
+    border: 1px solid #000;
+    padding: 10px;
+    margin-bottom: 12px;
+}
