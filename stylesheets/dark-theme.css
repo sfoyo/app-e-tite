@@ -1,0 +1,389 @@
+body {
+  background-image: url("../images/background-images/bg4.jpeg");
+    }
+
+.logo {
+    font-size: 50px;
+    font-family: fantasy;
+    padding: 25px;
+}
+
+header {
+  margin-bottom: 15px;
+}
+.veg-only-btn-container {
+    float: right;
+    padding: 20px;
+    margin-right: 25px;
+}
+.card {
+    margin-left: 15px;
+}
+.card-heading {
+    padding: 8px;
+    margin: 0px;
+    font-size: 25px;
+}
+.card-heading:hover {
+    box-shadow: 0px 5px 5px -2px grey
+}
+.items-container {
+    display: hide;
+    padding-top: 25px;
+}
+.quantity-btn-container {
+    display: inline-flex;
+    box-shadow: 7px 3px 9px 0px #5b5b5a;
+    background-color: #e6e6e6;
+    border-radius: 21px;
+    margin: 38px 18px;
+}
+.quantity-btn {
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    font-weight: bold;
+    background-color: #800000;
+}
+.quantity-text {
+    margin: 0px;
+    padding: 0px 7px;
+    font-weight: bold;
+    font-size: 28px;
+
+}
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  }
+  .item-img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+  }
+  .proceed-button {
+    width: 80%;
+    margin: 20px;
+    height: 50px;
+    font-size: 20px;
+    box-shadow: 6px 6px 8px 0px #2b6016;
+  }
+  .proceed-button:hover {
+    color: #d4e4d8;
+    text-decoration: none;
+    background-color: #2b6016;
+    box-shadow: 6px 6px 8px -2px #5b5b5a;
+  }
+  footer p {
+      text-align: right;
+  }
+  .item-name {
+    margin-top: 10px;
+    font-size: 27px;
+    font-family: initial;
+    color: #2f4f4f;
+    font-weight: bold;
+  }
+  .chef-screen-heading {
+    padding: 7px 400px;
+    font-family: auto;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #800000;
+    font-weight: bold;
+}
+  .submenu-heading {
+    padding: 7px 35px;
+    font-family: auto;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #800000;
+    font-weight: bold;
+}
+ .item-desc {
+    font-family: initial;
+    font-style: italic;
+    color: #808080;
+ }
+  .items {
+    border-bottom: 1px solid #207d80bd;
+  }
+  .button-container {
+    position: fixed;
+    bottom: 0px;
+    background-image: url("../images/background-images/bg4.jpeg");
+    width: 100%;
+    border-top: 1px solid #000000;
+    z-index: 1000;
+  }
+  #myBtn {
+    display: block;
+    position: fixed;
+    bottom: 115px;
+    right: 26px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #801a17;
+    color: white;
+    cursor: pointer;
+    padding: 7px;
+    border-radius: 7px;
+    font-size: 19px;
+  }
+  
+  #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
+
+  /* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2f4e4f;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color:white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #4ca746;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #4ca746;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.submenu-container {
+  background-image: url("../images/background-images/bg4.jpeg");
+}
+.item-img {
+  border: 3px solid #81200e;
+}
+
+
+.menu-button {
+  border-radius: 10px;
+  padding: 15px;
+  background: none;
+  border: 5px solid #81200e;
+}
+.menu-button img {
+  width: 40px;
+  height: 40px;
+}
+
+.rating-heading {
+    font-size: 70px;
+    color: maroon;
+    font-weight: bold;
+    font-family: initial;
+}
+.star-container {
+  display: inline-flex;
+}
+.star-container img {
+  width: 138px;
+}
+.section {
+  padding: 185px 0px;
+}
+
+hr {
+  border: 5px solid #000000;
+}
+.page-heading {
+  font-size: 50px;
+  color: maroon;
+  font-weight: bold;
+  font-family: initial;
+}
+.chef-screen-item-name {
+  margin-top: 10px;
+  margin-left: 30px;
+  font-size: 27px;
+  font-family: initial;
+  color: #2f4f4f;
+  font-weight: bold;
+}
+.special-request {
+  font-family: initial;
+  margin-left: 30px;
+  font-style: italic;
+  color: #808080;
+}
+.number-of-items {
+  margin-top: 10px;
+  font-size: 30px;
+  font-family: initial;
+  color: #2f4f4f;
+  font-weight: bold;
+}
+.after-order-screen {
+  margin-top: 300px;
+  font-size: 60px;
+  margin-left: 130px; 
+}
+.all-set {
+  font-size: 60px;
+  margin-left: 400px; 
+}
+
+.chef-screen-tick {
+  margin: 20px;
+}
+
+.explore-more {
+  width: 90%;
+  margin: 20px;
+  height: 50px;
+  font-size: 20px;
+  box-shadow: 6px 6px 8px 0px #2b6016;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.time-indicator {
+    padding: 10px 0px;
+    box-shadow: 0px 8px 15px 0px #9f6866;
+
+}
