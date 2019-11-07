@@ -1,80 +1,524 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>-->
-    <link type="text/css" rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap-grid.css">
-    <link type="text/css" rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap-grid.min.css">
-    <link type="text/css" rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap-reboot.css">
-    <link type="text/css" rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap-reboot.min.css">
-    <link type="text/css" rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap.css">
-    <link type="text/css" rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap.min.css">
-    <script src="../stylesheets/bootstrap-4.3.1-dist/js/bootstrap.bundle.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="../stylesheets/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="../stylesheets/bootstrap-4.3.1-dist/js/bootstrap.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="../stylesheets/bootstrap-4.3.1-dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <link type="text/css" rel="stylesheet" href="../stylesheets/main.css">
-    <title>Appetite</title>
-</head>
-<body>
-<header>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <center>
-                    <p class="logo">
-                        app-e-tite
-                    </p>
-                </center>
-            </div>
-        </div>
-    </div>
-</header>
-<main>
-    <nav>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <ul>
-                        <li>Drinks</li>
-                        <li>Beverages</li>
-                        <li>Food</li>
-                        <li>Desserts</li>
-                    </ul>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap-grid.css">
+        <link rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap-grid.min.css">
+        <link rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap-reboot.css">
+        <link rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap-reboot.min.css">
+        <link rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <script src="../stylesheets/bootstrap-4.3.1-dist/js/bootstrap.bundle.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"></script>
+        <script src="../stylesheets/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"></script>
+        <script src="../stylesheets/bootstrap-4.3.1-dist/js/bootstrap.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"></script>
+        <script src="../stylesheets/bootstrap-4.3.1-dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"></script>
+        <script src="../script/jquery/jquery.js"></script>
+        <link type="text/css" rel="stylesheet" href="../stylesheets/dark-theme.css">
+        <script src="../script/scripts.js"></script>
+        <title>Appetite</title>
+    </head>
+    <body>
+        
+       
+        <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+        <header>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <center>
+                            <img src="../images/logo2.png">
+                        </center>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <ul class="main-menu">
-                    <li>Starters</li>
-                    <li>Main Course</li>
-                    <li>Breads</li>
-                </ul>
+        </header>
+       <main>
+            <div class="container-fliud">
+                <div class="row">
+                    <div class="col-md-3">
+                        <center>
+                            <button type="button" class="menu-button"><img src="../stylesheets/fontawesome-free-5.11.2-web/svgs/solid/utensils.svg"><span class="fa fa-coffee"></span></button>
+                        </center>
+                    </div>
+                    <div class="col-md-3">
+                        <center>
+                            <button type="button" class="menu-button"><img src="../stylesheets/fontawesome-free-5.11.2-web/svgs/solid/coffee.svg"><span class="fa fa-coffee"></span></button>
+                        </center>
+                    </div>
+                    <div class="col-md-3">
+                        <center>
+                            <button type="button" class="menu-button"><img src="../stylesheets/fontawesome-free-5.11.2-web/svgs/solid/glass-martini-alt.svg"><span class="fa fa-coffee"></span></button>
+                        </center>
+                    </div>
+                    <div class="col-md-3">
+                        <center>
+                            <button type="button" class="menu-button"><img src="../stylesheets/fontawesome-free-5.11.2-web/svgs/solid/ice-cream.svg"><span class="fa fa-coffee"></span></button>
+                        </center>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Rounded switch -->
+                        <div class="veg-only-btn-container">
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round" onclick="displayVegOnly()"></span>
+                            </label>
+
+                            <label> Veg only</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card submenu-container">
+                            <p class="card-heading submenu-heading" onclick="collapseMenuCards('submenu-heading-1')"><span class="">+</span> Starters</p>
+                            <div class="items-container"  id="submenu-heading-1">
+                                <div class="container-fluid">
+                                    <div class="row items veg-items">
+                                        <div class="col-sm-3">
+                                            <center>
+                                                <img src="../images/food-images/burger.jpg" class="rounded item-img">
+                                            </center>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p class="item-name">Burger</p>
+                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="quantity-btn-container">
+                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-starters-item1-reduce-btn" onclick="updateQuantity('quantity-starters-item1', true)" disabled>-</button>
+                                                <p class="quantity-text" id="quantity-starters-item1">0</p>
+                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-starters-item1')">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row items veg-items">
+                                        <div class="col-sm-3">
+                                            <center>
+                                                <img src="../images/food-images/fries.jpg" class="rounded item-img">
+                                            </center>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p class="item-name">Fries</p>
+                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="quantity-btn-container">
+                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-starters-item2-reduce-btn" onclick="updateQuantity('quantity-starters-item2', true)" disabled>-</button>
+                                                <p class="quantity-text" id="quantity-starters-item2">0</p>
+                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-starters-item2')">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row items veg-items">
+                                        <div class="col-sm-3">
+                                            <center>
+                                                <img src="../images/food-images/pasta.jpg" class="rounded item-img">
+                                            </center>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p class="item-name">Pasta</p>
+                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="quantity-btn-container">
+                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-starters-item3-reduce-btn" onclick="updateQuantity('quantity-starters-item3', true)" disabled>-</button>
+                                                <p class="quantity-text" id="quantity-starters-item3">0</p>
+                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-starters-item3')">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row items veg-items">
+                                        <div class="col-sm-3">
+                                            <center>
+                                                <img src="../images/food-images/momos.jpg" class="rounded item-img">
+                                            </center>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p class="item-name">Momos</p>
+                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="quantity-btn-container">
+                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-starters-item4-reduce-btn" onclick="updateQuantity('quantity-starters-item4', true)" disabled>-</button>
+                                                <p class="quantity-text" id="quantity-starters-item4">0</p>
+                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-starters-item4')">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row items veg-items">
+                                        <div class="col-sm-3">
+                                            <center>
+                                                <img src="../images/food-images/biscuit.jpg" class="rounded item-img">
+                                            </center>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p class="item-name">Biscuit</p>
+                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="quantity-btn-container">
+                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-starters-item5-reduce-btn" onclick="updateQuantity('quantity-starters-item5', true)" disabled>-</button>
+                                                <p class="quantity-text" id="quantity-starters-item5">0</p>
+                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-starters-item5')">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row items non-veg-items">
+                                        <div class="col-sm-3">
+                                            <center>
+                                                <img src="../images/food-images/chicken.jpg" class="rounded item-img">
+                                            </center>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p class="item-name">Chicken</p>
+                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="quantity-btn-container">
+                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-starters-item6-reduce-btn" onclick="updateQuantity('quantity-starters-item6', true)" disabled>-</button>
+                                                <p class="quantity-text" id="quantity-starters-item6">0</p>
+                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-starters-item6')">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row items veg-items">
+                                        <div class="col-sm-3">
+                                            <center>
+                                                <img src="../images/food-images/samosa.jpg" class="rounded item-img">
+                                            </center>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p class="item-name">Samosa</p>
+                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="quantity-btn-container">
+                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-starters-item7-reduce-btn" onclick="updateQuantity('quantity-starters-item7', true)" disabled>-</button>
+                                                <p class="quantity-text" id="quantity-starters-item7">0</p>
+                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-starters-item7')">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card submenu-container">
+                            <p class="card-heading submenu-heading" onclick="collapseMenuCards('submenu-heading-2')"><span class="">+</span> Main Course</p>
+                            <div class="items-container" id="submenu-heading-2">
+                                <div class="container-fluid">
+                                    <div class="row items veg-items">
+                                        <div class="col-sm-3">
+                                            <center>
+                                                <img src="../images/food-images/1.jpg" class="rounded item-img">
+                                            </center>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p class="item-name">Item 1</p>
+                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="quantity-btn-container">
+                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-maincourse-item1-reduce-btn" onclick="updateQuantity('quantity-maincourse-item1', true)" disabled>-</button>
+                                                <p class="quantity-text" id="quantity-maincourse-item1">0</p>
+                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-maincourse-item1')">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row items veg-items">
+                                        <div class="col-sm-3">
+                                            <center>
+                                                <img src="../images/food-images/2.jpg" class="rounded item-img">
+                                            </center>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p class="item-name">Item 1</p>
+                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="quantity-btn-container">
+                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-maincourse-item2-reduce-btn" onclick="updateQuantity('quantity-maincourse-item2', true)" disabled>-</button>
+                                                <p class="quantity-text" id="quantity-maincourse-item2">0</p>
+                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-maincourse-item2')">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row items veg-items">
+                                        <div class="col-sm-3">
+                                            <center>
+                                                <img src="../images/food-images/3.jpg" class="rounded item-img">
+                                            </center>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p class="item-name">Item 1</p>
+                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="quantity-btn-container">
+                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-maincourse-item3-reduce-btn" onclick="updateQuantity('quantity-maincourse-item3', true)" disabled>-</button>
+                                                <p class="quantity-text" id="quantity-maincourse-item3">0</p>
+                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-maincourse-item3')">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row items non-veg-items">
+                                        <div class="col-sm-3">
+                                            <center>
+                                                <img src="../images/food-images/4.jpg" class="rounded item-img">
+                                            </center>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p class="item-name">Item 1</p>
+                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="quantity-btn-container">
+                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-maincourse-item4-reduce-btn" onclick="updateQuantity('quantity-maincourse-item4', true)" disabled>-</button>
+                                                <p class="quantity-text" id="quantity-maincourse-item4">0</p>
+                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-maincourse-item4')">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row items veg-items">
+                                        <div class="col-sm-3">
+                                            <center>
+                                                <img src="../images/food-images/5.jpg" class="rounded item-img">
+                                            </center>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p class="item-name">Item 1</p>
+                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="quantity-btn-container">
+                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-maincourse-item5-reduce-btn" onclick="updateQuantity('quantity-maincourse-item5', true)" disabled>-</button>
+                                                <p class="quantity-text" id="quantity-maincourse-item5">0</p>
+                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-maincourse-item5')">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row items veg-items">
+                                        <div class="col-sm-3">
+                                            <center>
+                                                <img src="../images/food-images/6.jpg" class="rounded item-img">
+                                            </center>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p class="item-name">Item 1</p>
+                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="quantity-btn-container">
+                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-maincourse-item6-reduce-btn" onclick="updateQuantity('quantity-maincourse-item6', true)" disabled>-</button>
+                                                <p class="quantity-text" id="quantity-maincourse-item6">0</p>
+                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-maincourse-item6')">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row items veg-items">
+                                        <div class="col-sm-3">
+                                            <center>
+                                                <img src="../images/food-images/7.jpg" class="rounded item-img">
+                                            </center>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p class="item-name">Item 1</p>
+                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="quantity-btn-container">
+                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-maincourse-item7-reduce-btn" onclick="updateQuantity('quantity-maincourse-item7', true)" disabled>-</button>
+                                                <p class="quantity-text" id="quantity-maincourse-item7">0</p>
+                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-maincourse-item7')">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card submenu-container">
+                            <p class="card-heading submenu-heading" onclick="collapseMenuCards('submenu-heading-3')"><span class="">+</span> Desert</p>
+                            <div class="items-container" id="submenu-heading-3">
+                                <div class="container-fluid">
+                                    <div class="row items veg-items">
+                                        <div class="col-sm-3">
+                                            <center>
+                                                <img src="../images/food-images/D1.jpg" class="rounded item-img">
+                                            </center>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p class="item-name">Item 1</p>
+                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="quantity-btn-container">
+                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-deserts-item1-reduce-btn" onclick="updateQuantity('quantity-deserts-item1', true)" disabled>-</button>
+                                                <p class="quantity-text" id="quantity-deserts-item1">0</p>
+                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-deserts-item1')">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row items veg-items">
+                                        <div class="col-sm-3">
+                                            <center>
+                                                <img src="../images/food-images/D2.jpg" class="rounded item-img">
+                                            </center>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p class="item-name">Item 1</p>
+                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="quantity-btn-container">
+                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-deserts-item2-reduce-btn" onclick="updateQuantity('quantity-deserts-item2', true)" disabled>-</button>
+                                                <p class="quantity-text" id="quantity-deserts-item2">0</p>
+                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-deserts-item2')">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row items veg-items">
+                                        <div class="col-sm-3">
+                                            <center>
+                                                <img src="../images/food-images/D3.jpg" class="rounded item-img">
+                                            </center>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p class="item-name">Item 1</p>
+                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="quantity-btn-container">
+                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-deserts-item3-reduce-btn" onclick="updateQuantity('quantity-deserts-item3', true)" disabled>-</button>
+                                                <p class="quantity-text" id="quantity-deserts-item3">0</p>
+                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-deserts-item3')">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row items veg-items">
+                                        <div class="col-sm-3">
+                                            <center>
+                                                <img src="../images/food-images/D4.jpg" class="rounded item-img">
+                                            </center>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p class="item-name">Item 1</p>
+                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="quantity-btn-container">
+                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-deserts-item4-reduce-btn" onclick="updateQuantity('quantity-deserts-item4', true)" disabled>-</button>
+                                                <p class="quantity-text" id="quantity-deserts-item4">0</p>
+                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-deserts-item4')">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row items veg-items">
+                                        <div class="col-sm-3">
+                                            <center>
+                                                <img src="../images/food-images/D5.jpg" class="rounded item-img">
+                                            </center>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p class="item-name">Item 1</p>
+                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="quantity-btn-container">
+                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-deserts-item5-reduce-btn" onclick="updateQuantity('quantity-deserts-item5', true)" disabled>-</button>
+                                                <p class="quantity-text" id="quantity-deserts-item5">0</p>
+                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-deserts-item5')">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row items veg-items">
+                                        <div class="col-sm-3">
+                                            <center>
+                                                <img src="../images/food-images/D6.jpg" class="rounded item-img">
+                                            </center>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p class="item-name">Item 1</p>
+                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="quantity-btn-container">
+                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-deserts-item6-reduce-btn" onclick="updateQuantity('quantity-deserts-item6', true)" disabled>-</button>
+                                                <p class="quantity-text" id="quantity-deserts-item6">0</p>
+                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-deserts-item6')">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row items veg-items">
+                                        <div class="col-sm-3">
+                                            <center>
+                                                <img src="../images/food-images/D7.jpg" class="rounded item-img">
+                                            </center>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p class="item-name">Item 1</p>
+                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="quantity-btn-container">
+                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-deserts-item7-reduce-btn" onclick="updateQuantity('quantity-deserts-item7', true)" disabled>-</button>
+                                                <p class="quantity-text" id="quantity-deserts-item7">0</p>
+                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-deserts-item7')">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="botton-container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <center>
+                                <button type="button" class="btn btn-success proceed-button">PROCEED ORDER</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <center>
-                    <button class="btn btn-success order-btn">ORDER</button>
-                </center>
+        </main>
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Powered by: SFOYO</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</main>
-<footer>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <h4>
-                    powered by- Company
-                </h4>
-            </div>
-        </div>
-    </div>
-</footer>
-</body>
+        </footer>
+
+
+        <script>
+            function displayVegOnly() {
+                $(".non-veg-items").toggle("fast");
+            }
+
+            function collapseMenuCards(id) {
+                $("#"+id).slideToggle(250);
+            }
+
+            function updateQuantity(id, reduce=false) {
+                var current_quantity = $("#"+id).text();
+                if(reduce) {
+                    $("#"+id).text(parseInt(current_quantity)-1);
+                    if($("#"+id).text() != 0) {
+                        $("#"+id+"-reduce-btn").prop("disabled" ,false);
+                    }
+                    else {
+                        $("#"+id+"-reduce-btn").prop("disabled" ,true);
+                    }
+                }
+                else {
+                    $("#"+id).text(parseInt(current_quantity)+1);
+                    $("#"+id+"-reduce-btn").prop("disabled" ,false);
+                }
+            }
+        </script>
+    </body>
 </html>

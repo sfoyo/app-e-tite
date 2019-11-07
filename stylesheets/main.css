@@ -4,7 +4,10 @@ body {
     background-image: url("http://s1.1zoom.me/b4949/396/Apples_Water_Spray_511501_360x640.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+<<<<<<< HEAD
     background-color: #fafafa;
+=======
+>>>>>>> master
 }
 .header {
     box-shadow: 0px 3px 4px 0px grey;
@@ -20,6 +23,7 @@ nav ul {
     font-size: 30px;
     list-style: none;
     display: inline-flex;
+<<<<<<< HEAD
     margin-bottom: 0px;
     padding-left: 0px;
 }
@@ -32,6 +36,12 @@ nav ul li {
 nav ul li:hover {
     z-index: 1;
     border-bottom: none;
+=======
+}
+nav ul li {
+    padding: 0px 10px;
+    border: 1px solid black;
+>>>>>>> master
 }
 h4 {
     padding: 0px 10px;
@@ -42,6 +52,7 @@ h4 {
     font-size: 30px;
     font-weight: 600;
     font-family: sans-serif;
+<<<<<<< HEAD
     padding: 10px;
     background-color: #f2f2f2;
     box-shadow: 4px 4px 10px 0px grey;
@@ -60,3 +71,23 @@ h4 {
     font-weight: 600;
     margin: 10px;
 }
+=======
+    padding: 0px;
+}
+.main-menu li {
+    border: 1px solid #000;
+    padding: 10px;
+    margin-bottom: 12px;
+}
+.collapsible {
+    background-color:white;
+    color:black;
+    cursor: pointer;
+    padding: 0px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+>>>>>>> master

@@ -1,0 +1,191 @@
+header {
+  padding: 20px;
+}
+.logo {
+    font-size: 50px;
+    font-family: fantasy;
+    padding: 25px;
+}
+.veg-only-btn-container {
+    float: right;
+    margin-right: 25px;
+    padding: 20px 0px;
+}
+.card {
+    margin-left: 15px;
+}
+.card-heading {
+    padding: 8px;
+    margin: 0px;
+    font-size: 25px;
+}
+.card-heading:hover {
+    box-shadow: 0px 5px 5px -2px grey
+}
+.items-container {
+    display: hide;
+    padding-top: 25px;
+}
+.quantity-btn-container {
+    display: inline-flex;
+    box-shadow: 7px 3px 9px 0px #5b5b5a;
+    background-color: lightcyan;
+    border-radius: 21px;
+    margin: 38px 18px;
+}
+.quantity-btn {
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    background-color: #800000;
+}
+.quantity-text {
+    margin: 0px;
+    padding: 7px;
+}
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  }
+  .item-img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+  }
+  .proceed-button {
+    width: 750px;
+    margin: 20px;
+    height: 50px;
+    font-size: 20px;
+    box-shadow: 6px 6px 8px 0px #5b5b5a;
+  }
+  .proceed-button:hover {
+    box-shadow: 6px 6px 8px -2px #5b5b5a;
+  }
+  footer p {
+      text-align: right;
+  }
+  .item-name {
+    margin-top: 10px;
+    font-size: 27px;
+    font-family: initial;
+    color: #2f4f4f;
+    font-weight: bold;
+  }
+  .submenu-heading {
+    padding: 7px 35px;
+    font-family: auto;
+    color: #fff;
+    background-color: #800000;
+    font-weight: bold;
+}
+ .item-desc {
+    font-family: initial;
+    font-style: italic;
+    color: #808080;
+ }
+  .items {
+    border-bottom: 1px solid #2f4e4f36;
+  }
+  .button-container {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+    border-top: 1px solid grey;
+  }
+  #myBtn {
+    display: block;
+    position: fixed;
+    bottom: 62px;
+    right: 26px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #0c5460;
+    color: white;
+    cursor: pointer;
+    padding: 7px;
+    border-radius: 7px;
+    font-size: 19px;
+  }
+  
+  #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
+
+  /* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2f4e4f;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color:white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #4ca746;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #4ca746;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.menu-button {
+  border-radius: 10px;
+  padding: 15px;
+  background: none;
+  border: 5px solid #81200e;
+}
+.menu-button img {
+  width: 40px;
+  height: 40px;
+}
