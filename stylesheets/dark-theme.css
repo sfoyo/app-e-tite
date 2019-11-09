@@ -1,33 +1,21 @@
-<<<<<<< HEAD
+
 header {
   padding: 20px;
 }
-=======
+
 body {
   background-image: url("../images/background-images/bg4.jpeg");
     }
 
->>>>>>> bd74b50a8745d15dc17e9e7a14bb21dea0cb5b55
 .logo {
     font-size: 50px;
     font-family: fantasy;
     padding: 25px;
 }
-<<<<<<< HEAD
 .veg-only-btn-container {
     float: right;
     margin-right: 25px;
     padding: 20px 0px;
-=======
-
-header {
-  margin-bottom: 15px;
-}
-.veg-only-btn-container {
-    float: right;
-    padding: 20px;
-    margin-right: 25px;
->>>>>>> bd74b50a8745d15dc17e9e7a14bb21dea0cb5b55
 }
 .card {
     margin-left: 15px;
@@ -47,11 +35,7 @@ header {
 .quantity-btn-container {
     display: inline-flex;
     box-shadow: 7px 3px 9px 0px #5b5b5a;
-<<<<<<< HEAD
-    background-color: lightcyan;
-=======
     background-color: #e6e6e6;
->>>>>>> bd74b50a8745d15dc17e9e7a14bb21dea0cb5b55
     border-radius: 21px;
     margin: 38px 18px;
 }
@@ -59,22 +43,14 @@ header {
     border-radius: 100%;
     width: 40px;
     height: 40px;
-<<<<<<< HEAD
-=======
-    font-weight: bold;
->>>>>>> bd74b50a8745d15dc17e9e7a14bb21dea0cb5b55
     background-color: #800000;
 }
 .quantity-text {
     margin: 0px;
-<<<<<<< HEAD
-    padding: 7px;
-=======
     padding: 0px 7px;
     font-weight: bold;
     font-size: 28px;
 
->>>>>>> bd74b50a8745d15dc17e9e7a14bb21dea0cb5b55
 }
   .content {
     padding: 0 18px;
@@ -88,27 +64,11 @@ header {
     margin: 10px;
   }
   .proceed-button {
-<<<<<<< HEAD
-    width: 750px;
-    margin: 20px;
-    height: 50px;
-    font-size: 20px;
-    box-shadow: 6px 6px 8px 0px #5b5b5a;
-  }
-  .proceed-button:hover {
-=======
     width: 80%;
     margin: 20px;
     height: 50px;
     font-size: 20px;
     box-shadow: 6px 6px 8px 0px #2b6016;
-  }
-  .proceed-button:hover {
-    color: #d4e4d8;
-    text-decoration: none;
-    background-color: #2b6016;
->>>>>>> bd74b50a8745d15dc17e9e7a14bb21dea0cb5b55
-    box-shadow: 6px 6px 8px -2px #5b5b5a;
   }
   footer p {
       text-align: right;
@@ -120,11 +80,6 @@ header {
     color: #2f4f4f;
     font-weight: bold;
   }
-<<<<<<< HEAD
-  .submenu-heading {
-    padding: 7px 35px;
-    font-family: auto;
-=======
   .chef-screen-heading {
     padding: 7px 400px;
     font-family: auto;
@@ -137,7 +92,6 @@ header {
     padding: 7px 35px;
     font-family: auto;
     border-radius: 3px;
->>>>>>> bd74b50a8745d15dc17e9e7a14bb21dea0cb5b55
     color: #fff;
     background-color: #800000;
     font-weight: bold;
@@ -148,55 +102,16 @@ header {
     color: #808080;
  }
   .items {
-<<<<<<< HEAD
-    border-bottom: 1px solid #2f4e4f36;
-=======
     border-bottom: 1px solid #207d80bd;
->>>>>>> bd74b50a8745d15dc17e9e7a14bb21dea0cb5b55
   }
   .button-container {
     position: fixed;
     bottom: 0px;
-<<<<<<< HEAD
-    width: 100%;
-    z-index: 1000;
-    background-color: #fff;
-    border-top: 1px solid grey;
-=======
     background-image: url("../images/background-images/bg4.jpeg");
     width: 100%;
     border-top: 1px solid #000000;
     z-index: 1000;
->>>>>>> bd74b50a8745d15dc17e9e7a14bb21dea0cb5b55
   }
-  #myBtn {
-    display: block;
-    position: fixed;
-<<<<<<< HEAD
-    bottom: 62px;
-=======
-    bottom: 115px;
->>>>>>> bd74b50a8745d15dc17e9e7a14bb21dea0cb5b55
-    right: 26px;
-    z-index: 99;
-    border: none;
-    outline: none;
-<<<<<<< HEAD
-    background-color: #0c5460;
-=======
-    background-color: #801a17;
->>>>>>> bd74b50a8745d15dc17e9e7a14bb21dea0cb5b55
-    color: white;
-    cursor: pointer;
-    padding: 7px;
-    border-radius: 7px;
-    font-size: 19px;
-  }
-  
-  #myBtn:hover {
-    background-color: #555; /* Add a dark-grey background on hover */
-  }
-
   /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -259,8 +174,6 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-<<<<<<< HEAD
-=======
 .submenu-container {
   background-image: url("../images/background-images/bg4.jpeg");
 }
@@ -269,7 +182,6 @@ input:checked + .slider:before {
 }
 
 
->>>>>>> bd74b50a8745d15dc17e9e7a14bb21dea0cb5b55
 .menu-button {
   border-radius: 10px;
   padding: 15px;
@@ -279,8 +191,6 @@ input:checked + .slider:before {
 .menu-button img {
   width: 40px;
   height: 40px;
-<<<<<<< HEAD
-=======
 }
 
 .rating-heading {
@@ -351,104 +261,19 @@ hr {
   box-shadow: 6px 6px 8px 0px #2b6016;
 }
 
-* {box-sizing:border-box}
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Hide the images by default */
-.mySlides {
+.scroll-btn {
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0px 0px 10px 5px #7b716f;
+  background: transparent;
+  color: #81200e;
+  border: 3px solid #81200e;
   display: none;
-}
-
-/* Next & previous buttons */
-.prev, .next {
+  position: fixed;
+  bottom: 115px;
+  right: 26px;
+  z-index: 99;
   cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-.time-indicator {
-    padding: 10px 0px;
-    box-shadow: 0px 8px 15px 0px #9f6866;
-
->>>>>>> bd74b50a8745d15dc17e9e7a14bb21dea0cb5b55
 }
