@@ -793,7 +793,7 @@
             }
 
             $(document).ready(function() {
-                var scroll_height = parseInt($("header").css("height")) + parseInt($(".veg-only-btn-container").css("height"));
+                var scroll_height = parseInt($("header").css("height")) + parseInt($(".veg-only-btn-container").css("height")) - parseInt($("#menu-btn-container").css("height"));
                 var food_scroll_height = scroll_height;
                 var beverages_scroll_height = food_scroll_height + parseInt($("#submenu-heading-1").css("height")) + parseInt($("#submenu-heading-2").css("height")) + parseInt($(".submenu-heading").css("height")) + parseInt($(".submenu-heading").css("height"));
                 var drinks_scroll_height = beverages_scroll_height + parseInt($("#submenu-heading-3").css("height")) + parseInt($(".submenu-heading").css("height"));
@@ -807,7 +807,7 @@
                         $("#scroll-btn").fadeOut("fast");
                     }
                     if(scroll_position > parseInt($("header").css("height"))) {
-                        $("#menu-btn-container").css({"position": "fixed", "width": "100%", "top": "0px", "padding": "10px 0px", "z-index": "1000", "background-image": "url('../images/background-images/bg4.jpeg')"});
+                        $("#menu-btn-container").css({"position": "fixed", "width": "100%", "top": "0px", "padding": "5px 0px", "z-index": "1000", "background-image": "url('../images/background-images/bg4.jpeg')"});
                         $(".menu-button img").css({"width": "30px", "height": "30px"});
                     }
                     else {
