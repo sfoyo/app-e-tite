@@ -63,16 +63,19 @@ body {
     height: 100px;
     margin: 10px;
   }
-  .proceed-button {
+
+.proceed-button {
     width: 80%;
     margin: 20px;
     height: 50px;
     font-size: 20px;
     box-shadow: 6px 6px 8px 0px #2b6016;
   }
-  footer p {
+
+footer p {
       text-align: right;
   }
+
   .item-name {
     margin-top: 10px;
     font-size: 27px;
@@ -80,6 +83,7 @@ body {
     color: #2f4f4f;
     font-weight: bold;
   }
+
   .chef-screen-heading {
     padding: 7px 400px;
     font-family: auto;
@@ -96,17 +100,20 @@ body {
     background-color: #800000;
     font-weight: bold;
 }
- .item-desc {
+
+.item-desc {
     font-family: initial;
     font-style: italic;
     color: #808080;
     width: 250px;
     overflow: hidden;
  }
-  .items {
+
+ .items {
     border-bottom: 1px solid #207d80bd;
   }
-  .button-container {
+
+.button-container {
     position: fixed;
     bottom: 0px;
     background-image: url("../images/background-images/bg4.jpeg");
@@ -176,13 +183,14 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
 .submenu-container {
   background-image: url("../images/background-images/bg4.jpeg");
 }
+
 .item-img {
   border: 3px solid #81200e;
 }
-
 
 .menu-button {
   border-radius: 10px;
@@ -190,6 +198,7 @@ input:checked + .slider:before {
   background: none;
   border: 5px solid #81200e;
 }
+
 .menu-button img {
   width: 40px;
   height: 40px;
@@ -201,11 +210,13 @@ input:checked + .slider:before {
     font-weight: bold;
     font-family: initial;
 }
+
 .star-container {
   display: inline-flex;
   font-size: 120px;
   color: #81200e;
 }
+
 .section {
   padding: 185px 0px;
 }
@@ -213,12 +224,14 @@ input:checked + .slider:before {
 hr {
   border: 5px solid #000000;
 }
+
 .page-heading {
   font-size: 50px;
   color: maroon;
   font-weight: bold;
   font-family: initial;
 }
+
 .chef-screen-item-name {
   margin-top: 10px;
   margin-left: 30px;
@@ -227,12 +240,14 @@ hr {
   color: #2f4f4f;
   font-weight: bold;
 }
+
 .special-request {
   font-family: initial;
   margin-left: 30px;
   font-style: italic;
   color: #808080;
 }
+
 .number-of-items {
   margin-top: 10px;
   font-size: 30px;
@@ -240,6 +255,7 @@ hr {
   color: #2f4f4f;
   font-weight: bold;
 }
+
 .after-order-screen {
   margin-top: 300px;
   font-size: 60px;
@@ -262,7 +278,6 @@ hr {
   box-shadow: 6px 6px 8px 0px #2b6016;
 }
 
-
 .scroll-btn {
   border-radius: 100%;
   width: 40px;
@@ -278,25 +293,32 @@ hr {
   z-index: 99;
   cursor: pointer;
 }
+
 .time-indicator {
   padding: 15px 0px;
 }
+
 .payment-method-container {
   padding: 30px 0px;
 }
+
 .payment-method {
   display: none;
 }
+
 .payment-method-icon {
-  font-size: 100px;
-  color: #29a1a1;
-  border: 5px solid #29a1a1;
-  box-shadow: 5px 5px 8px 0px #29a1a1;
-  border-radius: 20px;
-  width: 180px;
-  background: #efefef;
+  font-size: 340px;
+    color: #a1822b;
+    /* border: 5px solid #a1822b; */
+    /* box-shadow: 5px 5px 8px 0px #a1822b; */
+    border-radius: 31px;
+    width: 500px;
+    height: 500px;
+    background: ../images/logo-images/logo2.png;
 }
+
 .payment-method-icon:hover {
+<<<<<<< Updated upstream
   border: 5px solid #1f7e7e;
   color: #1f7e7e;
 }
@@ -309,4 +331,24 @@ hr {
 }
 .item-desc-container {
   display: inline-flex;
+=======
+  /*border: 5px solid #1f7e7e; */
+  color: #2f4e4f;
+}
+
+.item-price {
+    font-weight: 500;
+    font-family: initial;
+    color: #2f4e4f;
+}
+
+.pay-with {
+    font-size: 54px;
+    color: #800000;
+}
+
+.or-text {
+  font-size: 50px;
+  color: #800000;
+>>>>>>> Stashed changes
 }
