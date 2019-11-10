@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap-grid.css">
+        <link rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap-grid.min.css">
+        <link rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap-reboot.css">
+        <link rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap-reboot.min.css">
+        <link rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../stylesheets/fontawesome-free-5.11.2-web/css/all.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="../stylesheets/bootstrap-4.3.1-dist/js/bootstrap.bundle.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"></script>
+        <script src="../stylesheets/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"></script>
+        <script src="../stylesheets/bootstrap-4.3.1-dist/js/bootstrap.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"></script>
+        <script src="../stylesheets/bootstrap-4.3.1-dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"></script>
+        <script src="../stylesheets/fontawesome-free-5.11.2-web/js/all.js"></script>
+        <script src="../script/jquery/jquery.js"></script>
+        <link type="text/css" rel="stylesheet" href="../stylesheets/dark-theme.css">
+        <script src="../script/scripts.js"></script>
+        <script src="../script/main.js"></script>
+        <title>Payment</title>
+    </head>
+    <body>
+        
+       
+        <button class="scroll-btn" id="scroll-btn" title="Go to top"><span class="fa fa-chevron-up"></span></button>
+        <header>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <center>
+                            <img src="../images/logo2.png">
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </header>
+       <main>
+            <div class="container-fliud">
+                <div class="row">
+                    <div class="col-md-12">
+                        <center>
+                            <button type="button" class="btn btn-success proceed-button">ORDER AGAIN</button>
+                        </center>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <center>
+                            <h4>-----OR-----</h4>
+                        </center>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <center>
+                            <h2>Checkout</h2>
+                        </center>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <center>
+                            <div class="payment-method-container" id="payment-method-card-container">
+                                <input type="radio" class="payment-method" name="payment-method" id="payment-method-card">
+                                <div class="payment-method-icon" onclick="selectPaymentMethod('payment-method-card')">
+                                    <span class="fas fa-credit-card"></span>
+                                </div>
+                            </div>
+                        </center>
+                    </div>
+                    <div class="col-md-6">
+                        <center>
+                            <div class="payment-method-container" id="payment-method-cash-container">
+                                <input type="radio" class="payment-method" name="payment-method" id="payment-method-cash">
+                                <div class="payment-method-icon" onclick="selectPaymentMethod('payment-method-cash')">
+                                    <span class="fas fa-money-bill-alt"></span>
+                                </div>
+                            </div>
+                        </center>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <center>
+                            <button type="button" class="btn btn-success proceed-button">Pay</button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Powered by: SFOYO</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+            function selectPaymentMethod(id) {
+                $("#"+id).prop("checked", true);
+            }
+        </script>
+    </body>
+</html>

@@ -8,29 +8,21 @@
         <link rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap-reboot.min.css">
         <link rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap.css">
         <link rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../stylesheets/fontawesome-free-5.11.2-web/css/solid.css">
-        <link rel="stylesheet" href="../stylesheets/fontawesome-free-5.11.2-web/css/solid.min.css">
-        <link rel="stylesheet" href="../stylesheets/fontawesome-free-5.11.2-web/css/svg-with-js.css">
-        <link rel="stylesheet" href="../stylesheets/fontawesome-free-5.11.2-web/css/svg-with-js.min.css">
-        <link rel="stylesheet" href="../stylesheets/fontawesome-free-5.11.2-web/css/v4-shims.css">
-        <link rel="stylesheet" href="../stylesheets/fontawesome-free-5.11.2-web/css/v4-shims.min.css">
+        <link rel="stylesheet" href="../stylesheets/fontawesome-free-5.11.2-web/css/all.css">
         <script src="../stylesheets/bootstrap-4.3.1-dist/js/bootstrap.bundle.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"></script>
         <script src="../stylesheets/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"></script>
         <script src="../stylesheets/bootstrap-4.3.1-dist/js/bootstrap.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"></script>
         <script src="../stylesheets/bootstrap-4.3.1-dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"></script>
-        <script src="../stylesheets/fontawesome-free-5.11.2-web/js/regular.js"></script>
-        <script src="../stylesheets/fontawesome-free-5.11.2-web/js/regular.min.js"></script>
-        <script src="../stylesheets/fontawesome-free-5.11.2-web/js/solid.js"></script>
-        <script src="../stylesheets/fontawesome-free-5.11.2-web/js/solid.min.js"></script>
-        <script src="../stylesheets/fontawesome-free-5.11.2-web/js/v4-shims.js"></script>
-        <script src="../stylesheets/fontawesome-free-5.11.2-web/js/v4-shims.min.js"></script>
+        <script src="../stylesheets/fontawesome-free-5.11.2-web/js/all.js"></script>
+        <script src="../script/jquery/jquery.js"></script>
         <link type="text/css" rel="stylesheet" href="../stylesheets/dark-theme.css">
         <script src="../script/scripts.js"></script>
-        <title>Chef-Screen</title>
+        <script src="../script/main.js"></script>
+        <title>Chef Screen</title>
     </head>
     <body>
         
-       
+        <button class="scroll-btn" id="scroll-btn" title="Go to top"><span class="fa fa-chevron-up"></span></button>
         <header>
             <div class="container-fluid">
                 <div class="row">
@@ -50,7 +42,7 @@
                             <p class="card-heading chef-screen-heading"> Table No. 1</p>
                             <div class="items-container">
                                 <div class="container-fluid">
-                                    <div class="row items">
+                                    <div class="row items" id="table-1-item-1">
                                          <div class="col-sm-8">
                                             <p class="chef-screen-item-name">Item1</p>
                                             <p class="special-request">special requests:  </p>
@@ -59,10 +51,10 @@
                                             <p class="number-of-items"> <b> X 1</b> </p>
                                         </div>
                                         <div class="col-sm-2">
-                                            <center><button type="button" class="btn btn-success chef-screen-tick">Done</button></center>
+                                            <center><button type="button" class="btn btn-success chef-screen-tick" onclick="removeItem('table-1-item-1')">Done</button></center>
                                         </div>
                                     </div>
-                                    <div class="row  items">
+                                    <div class="row items" id="table-1-item-2">
                                          <div class="col-sm-8">
                                             <p class="chef-screen-item-name">Item1</p>
                                             <p class="special-request">special requests:  </p>
@@ -71,10 +63,10 @@
                                             <p class="number-of-items"> <b> X 1</b> </p>
                                         </div>
                                         <div class="col-sm-2">
-                                            <center><button type="button" class="btn btn-success chef-screen-tick">Done</button></center>
+                                            <center><button type="button" class="btn btn-success chef-screen-tick" onclick="removeItem('table-1-item-2')">Done</button></center>
                                         </div>
                                     </div>
-                                    <div class="row  items">
+                                    <div class="row items" id="table-1-item-3">
                                          <div class="col-sm-8">
                                             <p class="chef-screen-item-name">Item1</p>
                                             <p class="special-request">special requests:  </p>
@@ -83,10 +75,10 @@
                                             <p class="number-of-items"> <b> X 1</b> </p>
                                         </div>
                                         <div class="col-sm-2">
-                                            <center><button type="button" class="btn btn-success chef-screen-tick">Done</button></center>
+                                            <center><button type="button" class="btn btn-success chef-screen-tick" onclick="removeItem('table-1-item-3')">Done</button></center>
                                         </div>
                                     </div>
-                                    <div class="row  items">
+                                    <div class="row items" id="table-1-item-4">
                                          <div class="col-sm-8">
                                             <p class="chef-screen-item-name">Item1</p>
                                             <p class="special-request">special requests:  </p>
@@ -95,10 +87,10 @@
                                             <p class="number-of-items"> <b> X 1</b> </p>
                                         </div>
                                         <div class="col-sm-2">
-                                            <center><button type="button" class="btn btn-success chef-screen-tick">Done</button></center>
+                                            <center><button type="button" class="btn btn-success chef-screen-tick" onclick="removeItem('table-1-item-4')">Done</button></center>
                                         </div>
                                     </div>
-                                    <div class="row  items">
+                                    <div class="row items" id="table-1-item-5">
                                          <div class="col-sm-8">
                                             <p class="chef-screen-item-name">Item1</p>
                                             <p class="special-request">special requests:  </p>
@@ -107,10 +99,10 @@
                                             <p class="number-of-items"> <b> X 1</b> </p>
                                         </div>
                                         <div class="col-sm-2">
-                                            <center><button type="button" class="btn btn-success chef-screen-tick">Done</button></center>
+                                            <center><button type="button" class="btn btn-success chef-screen-tick" onclick="removeItem('table-1-item-5')">Done</button></center>
                                         </div>
                                     </div>
-                                    <div class="row  items">
+                                    <div class="row items" id="table-1-item-6">
                                          <div class="col-sm-8">
                                             <p class="chef-screen-item-name">Item1</p>
                                             <p class="special-request">special requests:  </p>
@@ -119,7 +111,7 @@
                                             <p class="number-of-items"> <b> X 1</b> </p>
                                         </div>
                                         <div class="col-sm-2">
-                                            <center><button type="button" class="btn btn-success chef-screen-tick">Done</button></center>
+                                            <center><button type="button" class="btn btn-success chef-screen-tick" onclick="removeItem('table-1-item-6')">Done</button></center>
                                         </div>
                                     </div>
                                     <div class="new-order-container">
@@ -145,7 +137,7 @@
                                                 </center>
                                             </div>
                                         </div>
-                                        <div class="row  items">
+                                        <div class="row items" id="table-1-item-1">
                                             <div class="col-sm-9">
                                                 <p class="chef-screen-item-name">Item1</p>
                                                 <p class="special-request">special requests:  </p>
@@ -154,7 +146,7 @@
                                                 <p class="number-of-items"> <b> X 1</b> </p>
                                             </div>
                                         </div>
-                                        <div class="row  items">
+                                        <div class="row items" id="table-1-item-2">
                                                 <div class="col-sm-9">
                                                     <p class="chef-screen-item-name">Item1</p>
                                                     <p class="special-request">special requests:  </p>
@@ -171,7 +163,7 @@
                             <p class="card-heading chef-screen-heading"> Table No. 2</p>
                             <div class="items-container">
                                 <div class="container-fluid">
-                                    <div class="row  items">
+                                    <div class="row items" id="table-2-item-1">
                                          <div class="col-sm-8">
                                             <p class="chef-screen-item-name">Item 1</p>
                                             <p class="special-request">special requests:  </p>
@@ -180,10 +172,10 @@
                                             <p class="number-of-items"> <b> X 1</b> </p>
                                         </div>
                                         <div class="col-sm-2">
-                                            <center><button type="button" class="btn btn-success chef-screen-tick">Done</button></center>
+                                            <center><button type="button" class="btn btn-success chef-screen-tick" onclick="removeItem('table-2-item-1')">Done</button></center>
                                         </div>
                                     </div>
-                                    <div class="row  items">
+                                    <div class="row items" id="table-2-item-2">
                                          <div class="col-sm-8">
                                             <p class="chef-screen-item-name">Item 1</p>
                                             <p class="special-request">special requests:  </p>
@@ -192,10 +184,10 @@
                                             <p class="number-of-items"> <b> X 1</b> </p>
                                         </div>
                                         <div class="col-sm-2">
-                                            <center><button type="button" class="btn btn-success chef-screen-tick">Done</button></center>
+                                            <center><button type="button" class="btn btn-success chef-screen-tick" onclick="removeItem('table-2-item-2')">Done</button></center>
                                         </div>
                                     </div>
-                                    <div class="row  items">
+                                    <div class="row items" id="table-2-item-3">
                                          <div class="col-sm-8">
                                             <p class="chef-screen-item-name">Item 1</p>
                                             <p class="special-request">special requests:  </p>
@@ -204,10 +196,10 @@
                                             <p class="number-of-items"> <b> X 1</b> </p>
                                         </div>
                                         <div class="col-sm-2">
-                                            <center><button type="button" class="btn btn-success chef-screen-tick">Done</button></center>
+                                            <center><button type="button" class="btn btn-success chef-screen-tick" onclick="removeItem('table-2-item-3')">Done</button></center>
                                         </div>
                                     </div>
-                                    <div class="row  items">
+                                    <div class="row items" id="table-2-item-4">
                                          <div class="col-sm-8">
                                             <p class="chef-screen-item-name">Item 1</p>
                                             <p class="special-request">special requests:  </p>
@@ -216,10 +208,10 @@
                                             <p class="number-of-items"> <b> X 1</b> </p>
                                         </div>
                                         <div class="col-sm-2">
-                                            <center><button type="button" class="btn btn-success chef-screen-tick">Done</button></center>
+                                            <center><button type="button" class="btn btn-success chef-screen-tick" onclick="removeItem('table-2-item-4')">Done</button></center>
                                         </div>
                                     </div>
-                                    <div class="row  items">
+                                    <div class="row items" id="table-2-item-5">
                                          <div class="col-sm-8">
                                             <p class="chef-screen-item-name">Item 1</p>
                                             <p class="special-request">special requests:  </p>
@@ -228,10 +220,10 @@
                                             <p class="number-of-items"> <b> X 1</b> </p>
                                         </div>
                                         <div class="col-sm-2">
-                                            <center><button type="button" class="btn btn-success chef-screen-tick">Done</button></center>
+                                            <center><button type="button" class="btn btn-success chef-screen-tick" onclick="removeItem('table-2-item-5')">Done</button></center>
                                         </div>
                                     </div>
-                                    <div class="row  items">
+                                    <div class="row items" id="table-2-item-6">
                                          <div class="col-sm-8">
                                             <p class="chef-screen-item-name">Item 1</p>
                                             <p class="special-request">special requests:  </p>
@@ -240,10 +232,10 @@
                                             <p class="number-of-items"> <b> X 1</b> </p>
                                         </div>
                                         <div class="col-sm-2">
-                                            <center><button type="button" class="btn btn-success chef-screen-tick">Done</button></center>
+                                            <center><button type="button" class="btn btn-success chef-screen-tick" onclick="removeItem('table-2-item-6')">Done</button></center>
                                         </div>
                                     </div>
-                                    <div class="row  items">
+                                    <div class="row items" id="table-2-item-7">
                                          <div class="col-sm-8">
                                             <p class="chef-screen-item-name">Item 1</p>
                                             <p class="special-request">special requests:  </p>
@@ -252,7 +244,7 @@
                                             <p class="number-of-items"> <b> X 1</b> </p>
                                         </div>
                                         <div class="col-sm-2">
-                                            <center><button type="button" class="btn btn-success chef-screen-tick">Done</button></center>
+                                            <center><button type="button" class="btn btn-success chef-screen-tick" onclick="removeItem('table-2-item-7')">Done</button></center>
                                         </div>
                                     </div>
                                 </div>
@@ -262,7 +254,7 @@
                             <p class="card-heading chef-screen-heading">Table No. 3</p>
                             <div class="items-container">
                                 <div class="container-fluid">
-                                    <div class="row  items">
+                                    <div class="row items" id="table-3-item-1">
                                          <div class="col-sm-8">
                                             <p class="chef-screen-item-name">Item 1</p>
                                             <p class="special-request">special requests:  </p>
@@ -271,10 +263,10 @@
                                             <p class="number-of-items"> <b> X 1</b> </p>
                                         </div>
                                         <div class="col-sm-2">
-                                            <center><button type="button" class="btn btn-success chef-screen-tick">Done</button></center>
+                                            <center><button type="button" class="btn btn-success chef-screen-tick" onclick="removeItem('table-3-item-1')">Done</button></center>
                                         </div>
                                     </div>
-                                    <div class="row  items">
+                                    <div class="row items" id="table-3-item-2">
                                          <div class="col-sm-8">
                                             <p class="chef-screen-item-name">Item 1</p>
                                             <p class="special-request">special requests:  </p>
@@ -283,10 +275,10 @@
                                             <p class="number-of-items"> <b> X 1</b> </p>
                                         </div>
                                         <div class="col-sm-2">
-                                            <center><button type="button" class="btn btn-success chef-screen-tick">Done</button></center>
+                                            <center><button type="button" class="btn btn-success chef-screen-tick" onclick="removeItem('table-3-item-2')">Done</button></center>
                                         </div>
                                     </div>
-                                    <div class="row  items">
+                                    <div class="row items" id="table-3-item-3">
                                          <div class="col-sm-8">
                                             <p class="chef-screen-item-name">Item 1</p>
                                             <p class="special-request">special requests:  </p>
@@ -295,10 +287,10 @@
                                             <p class="number-of-items"> <b> X 1</b> </p>
                                         </div>
                                         <div class="col-sm-2">
-                                            <center><button type="button" class="btn btn-success chef-screen-tick">Done</button></center>
+                                            <center><button type="button" class="btn btn-success chef-screen-tick" onclick="removeItem('table-3-item-3')">Done</button></center>
                                         </div>
                                     </div>
-                                    <div class="row  items">
+                                    <div class="row items" id="table-3-item-4">
                                          <div class="col-sm-8">
                                             <p class="chef-screen-item-name">Item 1</p>
                                             <p class="special-request">special requests:  </p>
@@ -307,10 +299,10 @@
                                             <p class="number-of-items"> <b> X 1</b> </p>
                                         </div>
                                         <div class="col-sm-2">
-                                            <center><button type="button" class="btn btn-success chef-screen-tick">Done</button></center>
+                                            <center><button type="button" class="btn btn-success chef-screen-tick" onclick="removeItem('table-3-item-4')">Done</button></center>
                                         </div>
                                     </div>
-                                    <div class="row  items">
+                                    <div class="row items" id="table-3-item-5">
                                          <div class="col-sm-8">
                                             <p class="chef-screen-item-name">Item 1</p>
                                             <p class="special-request">special requests:  </p>
@@ -319,10 +311,10 @@
                                             <p class="number-of-items"> <b> X 1</b> </p>
                                         </div>
                                         <div class="col-sm-2">
-                                            <center><button type="button" class="btn btn-success chef-screen-tick">Done</button></center>
+                                            <center><button type="button" class="btn btn-success chef-screen-tick" onclick="removeItem('table-3-item-5')">Done</button></center>
                                         </div>
                                     </div>
-                                    <div class="row  items">
+                                    <div class="row items" id="table-3-item-6">
                                          <div class="col-sm-8">
                                             <p class="chef-screen-item-name">Item 1</p>
                                             <p class="special-request">special requests:  </p>
@@ -331,10 +323,10 @@
                                             <p class="number-of-items"> <b> X 1</b> </p>
                                         </div>
                                         <div class="col-sm-2">
-                                            <center><button type="button" class="btn btn-success chef-screen-tick">Done</button></center>
+                                            <center><button type="button" class="btn btn-success chef-screen-tick" onclick="removeItem('table-3-item-6')">Done</button></center>
                                         </div>
                                     </div>
-                                    <div class="row  items">
+                                    <div class="row items" id="table-3-item-7">
                                          <div class="col-sm-8">
                                             <p class="chef-screen-item-name">Item 1</p>
                                             <p class="special-request">special requests:  </p>
@@ -343,7 +335,7 @@
                                             <p class="number-of-items"> <b> X 1</b> </p>
                                         </div>
                                         <div class="col-sm-2">
-                                            <center><button type="button" class="btn btn-success chef-screen-tick">Done</button></center>
+                                            <center><button type="button" class="btn btn-success chef-screen-tick" onclick="removeItem('table-3-item-7')">Done</button></center>
                                         </div>
                                     </div>
                                 </div>

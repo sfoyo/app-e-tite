@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="../stylesheets/fontawesome-free-5.11.2-web/css/svg-with-js.min.css">
         <link rel="stylesheet" href="../stylesheets/fontawesome-free-5.11.2-web/css/v4-shims.css">
         <link rel="stylesheet" href="../stylesheets/fontawesome-free-5.11.2-web/css/v4-shims.min.css">
+
         <script src="../stylesheets/bootstrap-4.3.1-dist/js/bootstrap.bundle.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"></script>
         <script src="../stylesheets/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"></script>
         <script src="../stylesheets/bootstrap-4.3.1-dist/js/bootstrap.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"></script>
@@ -25,7 +26,9 @@
         <script src="../stylesheets/fontawesome-free-5.11.2-web/js/v4-shims.js"></script>
         <script src="../stylesheets/fontawesome-free-5.11.2-web/js/v4-shims.min.js"></script>
         <link type="text/css" rel="stylesheet" href="../stylesheets/dark-theme.css">
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         <script src="../script/scripts.js"></script>
+        <script src="../script/main.js"></script>
         <title>Rating</title>
     </head>
     <body>
@@ -67,18 +70,18 @@
                                 </div>
                             </div>
                             <div class="row">
-                                    <div class="col-sm-12">
-                                        <center>
-                                            <div class="star-container">
-                                                    <span></span><img src="../stylesheets/fontawesome-free-5.11.2-web/svgs/solid/star.svg"></span>
-                                                    <span><img src="../stylesheets/fontawesome-free-5.11.2-web/svgs/solid/star.svg"></span>
-                                                    <span><img src="../stylesheets/fontawesome-free-5.11.2-web/svgs/solid/star.svg"></span>
-                                                    <span><img src="../stylesheets/fontawesome-free-5.11.2-web/svgs/solid/star.svg"></span>
-                                                    <span><img src="../stylesheets/fontawesome-free-5.11.2-web/svgs/solid/star.svg"></span>
-                                            </div>
-                                        </center>
-                                    </div>
+                                <div class="col-sm-12">
+                                    <center>
+                                        <div class="star-container">
+                                            <span class="far fa-star" onclick="rate('food-rating-1')"></span>
+                                            <span class="far fa-star" onclick="rate('food-rating-2')"></span>
+                                            <span class="far fa-star" onclick="rate('food-rating-3')"></span>
+                                            <span class="far fa-star" onclick="rate('food-rating-4')"></span>
+                                            <span class="far fa-star" onclick="rate('food-rating-5')"></span>
+                                        </div>
+                                    </center>
                                 </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -96,18 +99,18 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                        <div class="col-sm-12">
-                                            <center>
+                                    <div class="col-sm-12">
+                                        <center>
                                             <div class="star-container">
-                                                    <span><img src="../stylesheets/fontawesome-free-5.11.2-web/svgs/solid/star.svg"></span>
-                                                    <span><img src="../stylesheets/fontawesome-free-5.11.2-web/svgs/solid/star.svg"></span>
-                                                    <span><img src="../stylesheets/fontawesome-free-5.11.2-web/svgs/solid/star.svg"></span>
-                                                    <span><img src="../stylesheets/fontawesome-free-5.11.2-web/svgs/solid/star.svg"></span>
-                                                    <span><img src="../stylesheets/fontawesome-free-5.11.2-web/svgs/solid/star.svg"></span>
-                                                </div>
-                                            </center>
-                                        </div>
+                                                <span class="far fa-star"></span>
+                                                <span class="far fa-star"></span>
+                                                <span class="far fa-star"></span>
+                                                <span class="far fa-star"></span>
+                                                <span class="far fa-star"></span>
+                                            </div>
+                                        </center>
                                     </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -131,5 +134,13 @@
                     </div>
                 </div>
             </footer>
+            <script>
+                function rate(id) {
+                    var rating = parseInt(id);
+                    for(i = 0; i < rating; i++) {
+                        $("#food-rating-"+id).prop("class", "fas fa-star");
+                    }
+                }
+            </script>
         </body>
         </html>
