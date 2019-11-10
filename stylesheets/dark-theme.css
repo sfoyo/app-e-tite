@@ -100,6 +100,8 @@ body {
     font-family: initial;
     font-style: italic;
     color: #808080;
+    width: 250px;
+    overflow: hidden;
  }
   .items {
     border-bottom: 1px solid #207d80bd;
@@ -297,4 +299,14 @@ hr {
 .payment-method-icon:hover {
   border: 5px solid #1f7e7e;
   color: #1f7e7e;
+}
+.item-desc-helper {
+  background: none;
+  border: none;
+  width: 50px;
+  color: #979797;
+  height: 24px;
+}
+.item-desc-container {
+  display: inline-flex;
 }

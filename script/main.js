@@ -5,6 +5,12 @@
 
             function collapseMenuCards(id) {
                 $("#"+id).slideToggle(250);
+                if($("#"+id+"-icon").attr("class") == "svg-inline--fa fa-plus fa-w-14") {
+                    $("#"+id+"-icon").attr("class", "svg-inline--fa fa-minus fa-w-14");
+                }
+                else {
+                    $("#"+id+"-icon").attr("class", "svg-inline--fa fa-plus fa-w-14");
+                }
             }
 
             function updateQuantity(id, reduce=false) {
@@ -47,7 +53,7 @@
                         $("#scroll-btn").fadeOut("fast");
                     }
                     if(scroll_position > parseInt($("header").css("height"))) {
-                        $("#menu-btn-container").css({"position": "fixed", "width": "100%", "top": "0px", "padding": "5px 0px", "z-index": "1000", "background-image": "url('../images/background-images/bg4.jpeg')"});
+                        $("#menu-btn-container").css({"position": "fixed", "width": "100%", "top": "0px", "padding": "10px 0px 5px 0px", "z-index": "1000", "background-image": "url('../images/background-images/bg4.jpeg')"});
                         $(".menu-button img").css({"width": "30px", "height": "30px"});
                     }
                     else {
