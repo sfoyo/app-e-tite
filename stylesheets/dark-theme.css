@@ -316,7 +316,7 @@ hr {
     border-radius: 31px;
     width: 500px;
     height: 500px;
-    background: ../images/logo-images/logo2.png;
+    background: url('../images/logo-images/logo2.png');
 }
 
 .payment-method-icon:hover {
@@ -340,4 +340,16 @@ hr {
 .or-text {
   font-size: 50px;
   color: #800000;
+}
+.item-desc-container {
+  display: inline-flex;
+}
+.item-desc-helper {
+  background: none;
+    border: none;
+    color: #808080;
+    width: 70px;
+    height: 24px;
+    font-family: initial;
+    font-style: italic;
 }
