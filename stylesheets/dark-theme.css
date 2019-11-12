@@ -260,10 +260,11 @@ hr {
   margin-top: 300px;
   font-size: 60px;
   margin-left: 130px; 
+  color: #800000;
 }
 .all-set {
   font-size: 60px;
-  margin-left: 400px; 
+  color: #800000;
 }
 
 .chef-screen-tick {
@@ -300,6 +301,7 @@ hr {
 
 .payment-method-container {
   padding: 30px 0px;
+  margin: 70px 0px;
 }
 
 .payment-method {
@@ -308,9 +310,9 @@ hr {
 
 .payment-method-icon {
   font-size: 340px;
-    color: #a1822b;
-    /* border: 5px solid #a1822b; */
-    /* box-shadow: 5px 5px 8px 0px #a1822b; */
+    color: #2f4e4f;
+     border: 10px solid #2f4e4f;
+     box-shadow: 5px 5px 8px 0px #2f4e4f; 
     border-radius: 31px;
     width: 500px;
     height: 500px;
@@ -318,22 +320,9 @@ hr {
 }
 
 .payment-method-icon:hover {
-<<<<<<< Updated upstream
-  border: 5px solid #1f7e7e;
-  color: #1f7e7e;
-}
-.item-desc-helper {
-  background: none;
-  border: none;
-  width: 50px;
-  color: #979797;
-  height: 24px;
-}
-.item-desc-container {
-  display: inline-flex;
-=======
-  /*border: 5px solid #1f7e7e; */
-  color: #2f4e4f;
+  border: 10px solid #a1822b; 
+  color: #a1822b;
+  box-shadow: 5px 5px 8px 0px #a1822b; 
 }
 
 .item-price {
@@ -345,10 +334,10 @@ hr {
 .pay-with {
     font-size: 54px;
     color: #800000;
+    margin: 30px 0px; 
 }
 
 .or-text {
   font-size: 50px;
   color: #800000;
->>>>>>> Stashed changes
 }
