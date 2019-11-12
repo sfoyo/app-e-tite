@@ -342,6 +342,7 @@ hr {
   color: #800000;
 }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 .item-desc-container {
   display: inline-flex;
 }
@@ -361,4 +362,20 @@ hr {
 }
 
 .mySlides {display:none;}
+>>>>>>> Stashed changes
+=======
+
+#menu-btn-container {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  padding: 10px 0px 5px 0px;
+  z-index: 1000;
+  background-image: url("../images/background-images/bg4.jpeg");
+  border: none;
+}
+#menu-btn-container img {
+  height: 30px;
+  width: 30px;
+}
 >>>>>>> Stashed changes

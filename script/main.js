@@ -46,19 +46,17 @@
                 var deserts_scroll_height =  drinks_scroll_height + parseInt($("#submenu-heading-4").css("height")) + parseInt($(".submenu-heading").css("height"));
                 $(document).scroll(function() {
                     var scroll_position = $(document).scrollTop();
-                    if(scroll_position > 280) {
+                    if(scroll_position > 380) {
                         $("#scroll-btn").fadeIn("fast");
                     }
                     else {
                         $("#scroll-btn").fadeOut("fast");
                     }
                     if(scroll_position > parseInt($("header").css("height"))) {
-                        $("#menu-btn-container").css({"position": "fixed", "width": "100%", "top": "0px", "padding": "10px 0px 5px 0px", "z-index": "1000", "background-image": "url('../images/background-images/bg4.jpeg')"});
-                        $(".menu-button img").css({"width": "30px", "height": "30px"});
+                        $("#menu-btn-container").css("display", "inline-flex");
                     }
                     else {
-                        $("#menu-btn-container").css({"position": "unset", "width": "100%", "top": "0px", "padding": "0px", "z-index": "0", "background-image": "url()"});
-                        $(".menu-button img").css({"width": "40px", "height": "40px"});
+                        $("#menu-btn-container").css("display", "none");
                     }
                 });
                 $("#scroll-btn").click(function() {
@@ -76,6 +74,7 @@
                 $("#deserts-menu-btn").click(function() {
                     scrollToPosition(deserts_scroll_height);
                 });
+<<<<<<< Updated upstream
             });
 
             var myIndex = 0;
@@ -92,3 +91,61 @@ function carousel() {
   x[myIndex-1].style.display = "block";  
   setTimeout(carousel, 1000); // Change image every 2 seconds
 }
+=======
+                
+                $("#food-menu-btn-top").click(function() {
+                    scrollToPosition(food_scroll_height);
+                });
+                $("#beverages-menu-btn-top").click(function() {
+                    scrollToPosition(beverages_scroll_height);
+                });
+                $("#drinks-menu-btn-top").click(function() {
+                    scrollToPosition(drinks_scroll_height);
+                });
+                $("#deserts-menu-btn-top").click(function() {
+                    scrollToPosition(deserts_scroll_height);
+                });
+            });
+
+/*             $(document).ready(function() {
+                var scroll_height = parseInt($("header").css("height")) + parseInt($(".veg-only-btn-container").css("height")) - parseInt($("#menu-btn-container").css("height"));
+                var food_scroll_height = scroll_height;
+                var beverages_scroll_height = food_scroll_height + parseInt($("#submenu-heading-1").css("height")) + parseInt($("#submenu-heading-2").css("height")) + parseInt($(".submenu-heading").css("height")) + parseInt($(".submenu-heading").css("height"));
+                var drinks_scroll_height = beverages_scroll_height + parseInt($("#submenu-heading-3").css("height")) + parseInt($(".submenu-heading").css("height"));
+                $(document).scroll(function() {
+                    var scroll_position = $(document).scrollTop();
+                    if(scroll_position > 380) {
+                        $("#scroll-btn").fadeIn("fast");
+                    }
+                    else {
+                        $("#scroll-btn").fadeOut("fast");
+                    }
+                    if(scroll_position > parseInt($("header").css("height"))) {
+                        $("#menu-btn-container").css("display", "inline-flex");
+                    }
+                    else {
+                        $("#menu-btn-container").css("display", "none");
+                    }
+                }); 
+            }); */
+
+
+/*             function scrollToPosition(position) {
+                $("html,body").animate({scrollTop:position}, 800, 'swing');
+            } */
+
+            $(document).scroll(function() {
+                if($(document).scrollTop() + $(document).height() == $(document).height()) {
+                    alert("bottom!");
+                }
+            });
+
+            /* $(document).on("scroll", function() {
+                var scrollHeight = $(document).height();
+                var scrollPosition = $(document).height() + $(document).scrollTop();
+                if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+                    $("#button-container").css("position", "relative","bottom", "90%");
+                    alert("bottom!");
+                }
+            }); */
+>>>>>>> Stashed changes
