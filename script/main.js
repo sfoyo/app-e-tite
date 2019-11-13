@@ -91,6 +91,7 @@ function carousel() {
   x[myIndex-1].style.display = "block";  
   setTimeout(carousel, 1000); // Change image every 2 seconds
 }
+<<<<<<< Updated upstream
 =======
                 
                 $("#food-menu-btn-top").click(function() {
@@ -148,4 +149,10 @@ function carousel() {
                     alert("bottom!");
                 }
             }); */
+>>>>>>> Stashed changes
+=======
+
+function myFunction() {
+    location.replace("review-order.html")
+  }
 >>>>>>> Stashed changes

@@ -257,13 +257,14 @@ hr {
 }
 
 .after-order-screen {
-  margin-top: 300px;
+  margin-top: -100px;
   font-size: 60px;
   margin-left: 130px; 
   color: #800000;
 }
 .all-set {
   font-size: 60px;
+  margin-top: -80px;
   color: #800000;
 }
 
@@ -316,7 +317,7 @@ hr {
     border-radius: 31px;
     width: 500px;
     height: 500px;
-    background: url('../images/logo-images/logo2.png');
+    background: url('../images/logo-images/background-images/.bg4.jpeg');
 }
 
 .payment-method-icon:hover {
@@ -328,7 +329,7 @@ hr {
 .item-price {
     font-weight: 500;
     font-family: initial;
-    color: #2f4e4f;
+    color: #6ec231;
 }
 
 .pay-with {
@@ -343,24 +344,26 @@ hr {
 }
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 .item-desc-container {
   display: inline-flex;
 }
 .item-desc-helper {
   background: none;
-    border: none;
-    color: #808080;
-    width: 70px;
-    height: 24px;
-    font-family: initial;
-    font-style: italic;
-}
-=======
-
-.mySlides {
-  display:none;
+  border: none;
+  color: #4ca746;
+  width: 70px;
+  height: 24px;
+  font-family: initial;
+  font-weight: bold;
+  font-style: inherit;
+  font-size: 16px;
 }
 
+<<<<<<< Updated upstream
 .mySlides {display:none;}
 >>>>>>> Stashed changes
 =======
@@ -377,5 +380,13 @@ hr {
 #menu-btn-container img {
   height: 30px;
   width: 30px;
+}
+>>>>>>> Stashed changes
+=======
+.animation {
+  width: 600px;
+  height: 500px;
+  color: red;
+  box-shadow: 0px 0px 21px 26px #7d4221;
 }
 >>>>>>> Stashed changes
