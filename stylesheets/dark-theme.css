@@ -342,12 +342,6 @@ hr {
   font-size: 50px;
   color: #800000;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 .item-desc-container {
   display: inline-flex;
 }
@@ -363,10 +357,7 @@ hr {
   font-size: 16px;
 }
 
-<<<<<<< Updated upstream
 .mySlides {display:none;}
->>>>>>> Stashed changes
-=======
 
 #menu-btn-container {
   position: fixed;
@@ -376,17 +367,15 @@ hr {
   z-index: 1000;
   background-image: url("../images/background-images/bg4.jpeg");
   border: none;
+  display: none;
 }
 #menu-btn-container img {
   height: 30px;
   width: 30px;
 }
->>>>>>> Stashed changes
-=======
 .animation {
   width: 600px;
   height: 500px;
   color: red;
   box-shadow: 0px 0px 21px 26px #7d4221;
 }
->>>>>>> Stashed changes

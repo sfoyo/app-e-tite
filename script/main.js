@@ -38,6 +38,21 @@
                 $("#"+id).toggle("fast");
             }
 
+function getData() {
+    var item_ids = [];
+    var item_quantitys = [];
+    var total_items = $(".quantity-text").length;
+    for (var i = 0; i < total_items; i++) {
+        var item = $(".quantity-text:eq(" + i + ")");
+        if (parseInt(item.text()) != 0) {
+            item_ids.push(item.attr("id").match(/(\d+)/)[0]);
+            item_quantitys.push(parseInt(item.text()));
+        }
+    }
+    var data = { item_id:item_ids, item_quantity:item_quantitys };
+                return data;
+            }
+
             $(document).ready(function() {
                 var scroll_height = parseInt($("header").css("height")) + parseInt($(".veg-only-btn-container").css("height")) - parseInt($("#menu-btn-container").css("height"));
                 var food_scroll_height = scroll_height;
@@ -74,7 +89,30 @@
                 $("#deserts-menu-btn").click(function() {
                     scrollToPosition(deserts_scroll_height);
                 });
-<<<<<<< Updated upstream
+                $("#food-menu-btn-top").click(function() {
+                    scrollToPosition(food_scroll_height);
+                });
+                $("#beverages-menu-btn-top").click(function() {
+                    scrollToPosition(beverages_scroll_height);
+                });
+                $("#drinks-menu-btn-top").click(function() {
+                    scrollToPosition(drinks_scroll_height);
+                });
+                $("#deserts-menu-btn-top").click(function() {
+                    scrollToPosition(deserts_scroll_height);
+                });
+
+                $("#proceed-btn").click(function() {
+                    var data = getData();
+                        $.ajax({
+                            type: "POST",
+                            url: "http://localhost:8080/Project/app-e-tite/template/review-order.php",
+                            data: JSON.stringify(data),
+                            success: function(result) {
+                                window.location.assign("http://localhost:8080/Project/app-e-tite/template/review-order.php");
+                            }
+                        });
+                });
             });
 
             var myIndex = 0;
@@ -91,22 +129,8 @@ function carousel() {
   x[myIndex-1].style.display = "block";  
   setTimeout(carousel, 1000); // Change image every 2 seconds
 }
-<<<<<<< Updated upstream
-=======
                 
-                $("#food-menu-btn-top").click(function() {
-                    scrollToPosition(food_scroll_height);
-                });
-                $("#beverages-menu-btn-top").click(function() {
-                    scrollToPosition(beverages_scroll_height);
-                });
-                $("#drinks-menu-btn-top").click(function() {
-                    scrollToPosition(drinks_scroll_height);
-                });
-                $("#deserts-menu-btn-top").click(function() {
-                    scrollToPosition(deserts_scroll_height);
-                });
-            });
+                
 
 /*             $(document).ready(function() {
                 var scroll_height = parseInt($("header").css("height")) + parseInt($(".veg-only-btn-container").css("height")) - parseInt($("#menu-btn-container").css("height"));
@@ -149,10 +173,7 @@ function carousel() {
                     alert("bottom!");
                 }
             }); */
->>>>>>> Stashed changes
-=======
 
 function myFunction() {
     location.replace("review-order.html")
   }
->>>>>>> Stashed changes

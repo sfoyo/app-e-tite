@@ -1,5 +1,5 @@
 <?php
-    $conn = mysqli_connect('localhost', 'root', 'Ankitpal*1828542146', 'appetite');
+    $conn = mysqli_connect('localhost', 'dpankur', 'dpankur07', 'appetite');
     $starters = mysqli_query($conn, "select * from menu_items where type = 'food' and sub_type = 'starter'");
     $main_course = mysqli_query($conn, "select * from menu_items where type = 'food' and sub_type = 'main course'");
     $beverages = mysqli_query($conn, "select * from menu_items where type = 'beverage'");
@@ -169,202 +169,40 @@
                             <p class="card-heading submenu-heading" onclick="collapseMenuCards('submenu-heading-3')"><span class="fas fa-minus" id="submenu-heading-3-icon"></span> Beverages</p>
                             <div class="items-container" id="submenu-heading-3">
                                 <div class="container-fluid">
-                                    <div class="row items veg-items">
-                                        <div class="col-sm-3">
-                                            <center>
-                                                <img src="images/food-images/1.jpg" class="rounded item-img">
-                                            </center>
+                                <?php
+                            while($row = mysqli_fetch_assoc($beverages)) {
+                                if($row['type'] == "beverage") {?>
+                                    <div class="row items <?php echo ($row['veg']) ? 'veg-items': 'non-veg-items'; ?>">
+                                    <div class="col-sm-3">
+                                        <center>
+                                            <img src="images/food-images/<?php echo $row['image'] ?>" class="rounded item-img">
+                                        </center>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="item-name"><?php echo $row['name'] ?></p>
+                                        <div class="item-desc-container">
+                                            <p class="item-desc"><?php echo $row['description'] ?></p>
+                                            <select class="item-desc-helper">
+                                                <option class="item-desc-helper-option">extra cheese</option>
+                                                <option class="item-desc-helper-option">extra toppings</option>
+                                                <option class="item-desc-helper-option">salad</option>
+                                                <option class="item-desc-helper-option">cream salad</option>
+                                            </select>
                                         </div>
-                                        <div class="col-sm-6">
-                                            <p class="item-name">Item 1</p>
-                                            <div class="item-desc-container">
-                                                <p class="item-desc">(the example of the desc goes here....)</p>
-                                                <select class="item-desc-helper">
-                                                    <option class="item-desc-helper-option">extra cheese</option>
-                                                    <option class="item-desc-helper-option">extra toppings</option>
-                                                    <option class="item-desc-helper-option">salad</option>
-                                                    <option class="item-desc-helper-option">cream salad</option>
-                                                </select>
-                                            </div>
-                                             
-                                                <p class="item-price"> ₹1000 </p>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="quantity-btn-container">
-                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-maincourse-item1-reduce-btn" onclick="updateQuantity('quantity-maincourse-item1', true)" disabled>-</button>
-                                                <p class="quantity-text" id="quantity-maincourse-item1">0</p>
-                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-maincourse-item1')">+</button>
-                                            </div>
+                                         
+                                            <p class="item-price">₹<?php echo $row['cost'] ?></p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="quantity-btn-container">
+                                            <button type="button" class="btn btn-danger quantity-btn" id="quantity-starters-item<?php echo $row['item_id'] ?>-reduce-btn" onclick="updateQuantity('quantity-starters-item<?php echo $row['item_id'] ?>', true)" disabled>-</button>
+                                            <p class="quantity-text" id="quantity-starters-item<?php echo $row['item_id'] ?>">0</p>
+                                            <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-starters-item<?php echo $row['item_id'] ?>')">+</button>
                                         </div>
                                     </div>
-                                    <div class="row items veg-items">
-                                        <div class="col-sm-3">
-                                            <center>
-                                                <img src="images/food-images/2.jpg" class="rounded item-img">
-                                            </center>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <p class="item-name">Item 1</p>
-                                            <div class="item-desc-container">
-                                                <p class="item-desc">(the example of the desc goes here....)</p>
-                                                <select class="item-desc-helper">
-                                                    <option class="item-desc-helper-option">extra cheese</option>
-                                                    <option class="item-desc-helper-option">extra toppings</option>
-                                                    <option class="item-desc-helper-option">salad</option>
-                                                    <option class="item-desc-helper-option">cream salad</option>
-                                                </select>
-                                            </div>
-                                             
-                                                <p class="item-price"> ₹1000 </p>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="quantity-btn-container">
-                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-maincourse-item2-reduce-btn" onclick="updateQuantity('quantity-maincourse-item2', true)" disabled>-</button>
-                                                <p class="quantity-text" id="quantity-maincourse-item2">0</p>
-                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-maincourse-item2')">+</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row items veg-items">
-                                        <div class="col-sm-3">
-                                            <center>
-                                                <img src="images/food-images/3.jpg" class="rounded item-img">
-                                            </center>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <p class="item-name">Item 1</p>
-                                            <div class="item-desc-container">
-                                                <p class="item-desc">(the example of the desc goes here....)</p>
-                                                <select class="item-desc-helper">
-                                                    <option class="item-desc-helper-option">extra cheese</option>
-                                                    <option class="item-desc-helper-option">extra toppings</option>
-                                                    <option class="item-desc-helper-option">salad</option>
-                                                    <option class="item-desc-helper-option">cream salad</option>
-                                                </select>
-                                            </div>
-                                             
-                                                <p class="item-price"> ₹1000 </p>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="quantity-btn-container">
-                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-maincourse-item3-reduce-btn" onclick="updateQuantity('quantity-maincourse-item3', true)" disabled>-</button>
-                                                <p class="quantity-text" id="quantity-maincourse-item3">0</p>
-                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-maincourse-item3')">+</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row items non-veg-items">
-                                        <div class="col-sm-3">
-                                            <center>
-                                                <img src="images/food-images/4.jpg" class="rounded item-img">
-                                            </center>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <p class="item-name">Item 1</p>
-                                            <div class="item-desc-container">
-                                                <p class="item-desc">(the example of the desc goes here....)</p>
-                                                <select class="item-desc-helper">
-                                                    <option class="item-desc-helper-option">extra cheese</option>
-                                                    <option class="item-desc-helper-option">extra toppings</option>
-                                                    <option class="item-desc-helper-option">salad</option>
-                                                    <option class="item-desc-helper-option">cream salad</option>
-                                                </select>
-                                            </div>
-                                             
-                                                <p class="item-price"> ₹1000 </p>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="quantity-btn-container">
-                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-maincourse-item4-reduce-btn" onclick="updateQuantity('quantity-maincourse-item4', true)" disabled>-</button>
-                                                <p class="quantity-text" id="quantity-maincourse-item4">0</p>
-                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-maincourse-item4')">+</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row items veg-items">
-                                        <div class="col-sm-3">
-                                            <center>
-                                                <img src="images/food-images/5.jpg" class="rounded item-img">
-                                            </center>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <p class="item-name">Item 1</p>
-                                            <div class="item-desc-container">
-                                                <p class="item-desc">(the example of the desc goes here....)</p>
-                                                <select class="item-desc-helper">
-                                                    <option class="item-desc-helper-option">extra cheese</option>
-                                                    <option class="item-desc-helper-option">extra toppings</option>
-                                                    <option class="item-desc-helper-option">salad</option>
-                                                    <option class="item-desc-helper-option">cream salad</option>
-                                                </select>
-                                            </div>
-                                             
-                                                <p class="item-price"> ₹1000 </p>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="quantity-btn-container">
-                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-maincourse-item5-reduce-btn" onclick="updateQuantity('quantity-maincourse-item5', true)" disabled>-</button>
-                                                <p class="quantity-text" id="quantity-maincourse-item5">0</p>
-                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-maincourse-item5')">+</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row items veg-items">
-                                        <div class="col-sm-3">
-                                            <center>
-                                                <img src="images/food-images/6.jpg" class="rounded item-img">
-                                            </center>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <p class="item-name">Item 1</p>
-                                            <div class="item-desc-container">
-                                                <p class="item-desc">(the example of the desc goes here....)</p>
-                                                <select class="item-desc-helper">
-                                                    <option class="item-desc-helper-option">extra cheese</option>
-                                                    <option class="item-desc-helper-option">extra toppings</option>
-                                                    <option class="item-desc-helper-option">salad</option>
-                                                    <option class="item-desc-helper-option">cream salad</option>
-                                                </select>
-                                            </div>
-                                             
-                                                <p class="item-price"> ₹1000 </p>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="quantity-btn-container">
-                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-maincourse-item6-reduce-btn" onclick="updateQuantity('quantity-maincourse-item6', true)" disabled>-</button>
-                                                <p class="quantity-text" id="quantity-maincourse-item6">0</p>
-                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-maincourse-item6')">+</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row items veg-items">
-                                        <div class="col-sm-3">
-                                            <center>
-                                                <img src="images/food-images/7.jpg" class="rounded item-img">
-                                            </center>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <p class="item-name">Item 1</p>
-                                            <div class="item-desc-container">
-                                                <p class="item-desc">(the example of the desc goes here....)</p>
-                                                <select class="item-desc-helper">
-                                                    <option class="item-desc-helper-option">extra cheese</option>
-                                                    <option class="item-desc-helper-option">extra toppings</option>
-                                                    <option class="item-desc-helper-option">salad</option>
-                                                    <option class="item-desc-helper-option">cream salad</option>
-                                                </select>
-                                            </div>
-                                             
-                                                <p class="item-price"> ₹1000 </p>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="quantity-btn-container">
-                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-maincourse-item7-reduce-btn" onclick="updateQuantity('quantity-maincourse-item7', true)" disabled>-</button>
-                                                <p class="quantity-text" id="quantity-maincourse-item7">0</p>
-                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-maincourse-item7')">+</button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                </div>
+                                <?php }
+                            }
+                        ?>
                                 </div>
                             </div>
                         </div>
@@ -372,202 +210,40 @@
                             <p class="card-heading submenu-heading" onclick="collapseMenuCards('submenu-heading-4')"><span class="fas fa-minus" id="submenu-heading-4-icon"></span> Drinks</p>
                             <div class="items-container" id="submenu-heading-4">
                                 <div class="container-fluid">
-                                    <div class="row items veg-items">
-                                        <div class="col-sm-3">
-                                            <center>
-                                                <img src="images/food-images/1.jpg" class="rounded item-img">
-                                            </center>
+                                <?php
+                            while($row = mysqli_fetch_assoc($drinks)) {
+                                if($row['type'] == "drink") {?>
+                                    <div class="row items <?php echo ($row['veg']) ? 'veg-items': 'non-veg-items'; ?>">
+                                    <div class="col-sm-3">
+                                        <center>
+                                            <img src="images/food-images/<?php echo $row['image'] ?>" class="rounded item-img">
+                                        </center>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="item-name"><?php echo $row['name'] ?></p>
+                                        <div class="item-desc-container">
+                                            <p class="item-desc"><?php echo $row['description'] ?></p>
+                                            <select class="item-desc-helper">
+                                                <option class="item-desc-helper-option">extra cheese</option>
+                                                <option class="item-desc-helper-option">extra toppings</option>
+                                                <option class="item-desc-helper-option">salad</option>
+                                                <option class="item-desc-helper-option">cream salad</option>
+                                            </select>
                                         </div>
-                                        <div class="col-sm-6">
-                                            <p class="item-name">Item 1</p>
-                                            <div class="item-desc-container">
-                                                <p class="item-desc">(the example of the desc goes here....)</p>
-                                                <select class="item-desc-helper">
-                                                    <option class="item-desc-helper-option">extra cheese</option>
-                                                    <option class="item-desc-helper-option">extra toppings</option>
-                                                    <option class="item-desc-helper-option">salad</option>
-                                                    <option class="item-desc-helper-option">cream salad</option>
-                                                </select>
-                                            </div>
-                                             
-                                                <p class="item-price"> ₹1000 </p>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="quantity-btn-container">
-                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-maincourse-item1-reduce-btn" onclick="updateQuantity('quantity-maincourse-item1', true)" disabled>-</button>
-                                                <p class="quantity-text" id="quantity-maincourse-item1">0</p>
-                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-maincourse-item1')">+</button>
-                                            </div>
+                                         
+                                            <p class="item-price">₹<?php echo $row['cost'] ?></p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="quantity-btn-container">
+                                            <button type="button" class="btn btn-danger quantity-btn" id="quantity-starters-item<?php echo $row['item_id'] ?>-reduce-btn" onclick="updateQuantity('quantity-starters-item<?php echo $row['item_id'] ?>', true)" disabled>-</button>
+                                            <p class="quantity-text" id="quantity-starters-item<?php echo $row['item_id'] ?>">0</p>
+                                            <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-starters-item<?php echo $row['item_id'] ?>')">+</button>
                                         </div>
                                     </div>
-                                    <div class="row items veg-items">
-                                        <div class="col-sm-3">
-                                            <center>
-                                                <img src="images/food-images/2.jpg" class="rounded item-img">
-                                            </center>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <p class="item-name">Item 1</p>
-                                            <div class="item-desc-container">
-                                                <p class="item-desc">(the example of the desc goes here....)</p>
-                                                <select class="item-desc-helper">
-                                                    <option class="item-desc-helper-option">extra cheese</option>
-                                                    <option class="item-desc-helper-option">extra toppings</option>
-                                                    <option class="item-desc-helper-option">salad</option>
-                                                    <option class="item-desc-helper-option">cream salad</option>
-                                                </select>
-                                            </div>
-                                             
-                                                <p class="item-price"> ₹1000 </p>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="quantity-btn-container">
-                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-maincourse-item2-reduce-btn" onclick="updateQuantity('quantity-maincourse-item2', true)" disabled>-</button>
-                                                <p class="quantity-text" id="quantity-maincourse-item2">0</p>
-                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-maincourse-item2')">+</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row items veg-items">
-                                        <div class="col-sm-3">
-                                            <center>
-                                                <img src="images/food-images/3.jpg" class="rounded item-img">
-                                            </center>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <p class="item-name">Item 1</p>
-                                            <div class="item-desc-container">
-                                                <p class="item-desc">(the example of the desc goes here....)</p>
-                                                <select class="item-desc-helper">
-                                                    <option class="item-desc-helper-option">extra cheese</option>
-                                                    <option class="item-desc-helper-option">extra toppings</option>
-                                                    <option class="item-desc-helper-option">salad</option>
-                                                    <option class="item-desc-helper-option">cream salad</option>
-                                                </select>
-                                            </div>
-                                             
-                                                <p class="item-price"> ₹1000 </p>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="quantity-btn-container">
-                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-maincourse-item3-reduce-btn" onclick="updateQuantity('quantity-maincourse-item3', true)" disabled>-</button>
-                                                <p class="quantity-text" id="quantity-maincourse-item3">0</p>
-                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-maincourse-item3')">+</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row items non-veg-items">
-                                        <div class="col-sm-3">
-                                            <center>
-                                                <img src="images/food-images/4.jpg" class="rounded item-img">
-                                            </center>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <p class="item-name">Item 1</p>
-                                            <div class="item-desc-container">
-                                                <p class="item-desc">(the example of the desc goes here....)</p>
-                                                <select class="item-desc-helper">
-                                                    <option class="item-desc-helper-option">extra cheese</option>
-                                                    <option class="item-desc-helper-option">extra toppings</option>
-                                                    <option class="item-desc-helper-option">salad</option>
-                                                    <option class="item-desc-helper-option">cream salad</option>
-                                                </select>
-                                            </div>
-                                             
-                                                <p class="item-price"> ₹1000 </p>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="quantity-btn-container">
-                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-maincourse-item4-reduce-btn" onclick="updateQuantity('quantity-maincourse-item4', true)" disabled>-</button>
-                                                <p class="quantity-text" id="quantity-maincourse-item4">0</p>
-                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-maincourse-item4')">+</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row items veg-items">
-                                        <div class="col-sm-3">
-                                            <center>
-                                                <img src="images/food-images/5.jpg" class="rounded item-img">
-                                            </center>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <p class="item-name">Item 1</p>
-                                            <div class="item-desc-container">
-                                                <p class="item-desc">(the example of the desc goes here....)</p>
-                                                <select class="item-desc-helper">
-                                                    <option class="item-desc-helper-option">extra cheese</option>
-                                                    <option class="item-desc-helper-option">extra toppings</option>
-                                                    <option class="item-desc-helper-option">salad</option>
-                                                    <option class="item-desc-helper-option">cream salad</option>
-                                                </select>
-                                            </div>
-                                             
-                                                <p class="item-price"> ₹1000 </p>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="quantity-btn-container">
-                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-maincourse-item5-reduce-btn" onclick="updateQuantity('quantity-maincourse-item5', true)" disabled>-</button>
-                                                <p class="quantity-text" id="quantity-maincourse-item5">0</p>
-                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-maincourse-item5')">+</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row items veg-items">
-                                        <div class="col-sm-3">
-                                            <center>
-                                                <img src="images/food-images/6.jpg" class="rounded item-img">
-                                            </center>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <p class="item-name">Item 1</p>
-                                            <div class="item-desc-container">
-                                                <p class="item-desc">(the example of the desc goes here....)</p>
-                                                <select class="item-desc-helper">
-                                                    <option class="item-desc-helper-option">extra cheese</option>
-                                                    <option class="item-desc-helper-option">extra toppings</option>
-                                                    <option class="item-desc-helper-option">salad</option>
-                                                    <option class="item-desc-helper-option">cream salad</option>
-                                                </select>
-                                            </div>
-                                             
-                                                <p class="item-price"> ₹1000 </p>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="quantity-btn-container">
-                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-maincourse-item6-reduce-btn" onclick="updateQuantity('quantity-maincourse-item6', true)" disabled>-</button>
-                                                <p class="quantity-text" id="quantity-maincourse-item6">0</p>
-                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-maincourse-item6')">+</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row items veg-items">
-                                        <div class="col-sm-3">
-                                            <center>
-                                                <img src="images/food-images/7.jpg" class="rounded item-img">
-                                            </center>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <p class="item-name">Item 1</p>
-                                            <div class="item-desc-container">
-                                                <p class="item-desc">(the example of the desc goes here....)</p>
-                                                <select class="item-desc-helper">
-                                                    <option class="item-desc-helper-option">extra cheese</option>
-                                                    <option class="item-desc-helper-option">extra toppings</option>
-                                                    <option class="item-desc-helper-option">salad</option>
-                                                    <option class="item-desc-helper-option">cream salad</option>
-                                                </select>
-                                            </div>
-                                             
-                                                <p class="item-price"> ₹1000 </p>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="quantity-btn-container">
-                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-maincourse-item7-reduce-btn" onclick="updateQuantity('quantity-maincourse-item7', true)" disabled>-</button>
-                                                <p class="quantity-text" id="quantity-maincourse-item7">0</p>
-                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-maincourse-item7')">+</button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                </div>
+                                <?php }
+                            }
+                        ?>
                                 </div>
                             </div>
                         </div>
@@ -575,202 +251,40 @@
                             <p class="card-heading submenu-heading" onclick="collapseMenuCards('submenu-heading-5')"><span class="fas fa-minus" id="submenu-heading-5-icon"></span> Deserts</p>
                             <div class="items-container" id="submenu-heading-5">
                                 <div class="container-fluid">
-                                    <div class="row items veg-items">
-                                        <div class="col-sm-3">
-                                            <center>
-                                                <img src="images/food-images/D1.jpg" class="rounded item-img">
-                                            </center>
+                                <?php
+                            while($row = mysqli_fetch_assoc($deserts)) {
+                                if($row['type'] == "desert") {?>
+                                    <div class="row items <?php echo ($row['veg']) ? 'veg-items': 'non-veg-items'; ?>">
+                                    <div class="col-sm-3">
+                                        <center>
+                                            <img src="images/food-images/<?php echo $row['image'] ?>" class="rounded item-img">
+                                        </center>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="item-name"><?php echo $row['name'] ?></p>
+                                        <div class="item-desc-container">
+                                            <p class="item-desc"><?php echo $row['description'] ?></p>
+                                            <select class="item-desc-helper">
+                                                <option class="item-desc-helper-option">extra cheese</option>
+                                                <option class="item-desc-helper-option">extra toppings</option>
+                                                <option class="item-desc-helper-option">salad</option>
+                                                <option class="item-desc-helper-option">cream salad</option>
+                                            </select>
                                         </div>
-                                        <div class="col-sm-6">
-                                            <p class="item-name">Item 1</p>
-                                            <div class="item-desc-container">
-                                                <p class="item-desc">(the example of the desc goes here....)</p>
-                                                <select class="item-desc-helper">
-                                                    <option class="item-desc-helper-option">extra cheese</option>
-                                                    <option class="item-desc-helper-option">extra toppings</option>
-                                                    <option class="item-desc-helper-option">salad</option>
-                                                    <option class="item-desc-helper-option">cream salad</option>
-                                                </select>
-                                            </div>
-                                             
-                                                <p class="item-price"> ₹1000 </p>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="quantity-btn-container">
-                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-deserts-item1-reduce-btn" onclick="updateQuantity('quantity-deserts-item1', true)" disabled>-</button>
-                                                <p class="quantity-text" id="quantity-deserts-item1">0</p>
-                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-deserts-item1')">+</button>
-                                            </div>
+                                         
+                                            <p class="item-price">₹<?php echo $row['cost'] ?></p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="quantity-btn-container">
+                                            <button type="button" class="btn btn-danger quantity-btn" id="quantity-starters-item<?php echo $row['item_id'] ?>-reduce-btn" onclick="updateQuantity('quantity-starters-item<?php echo $row['item_id'] ?>', true)" disabled>-</button>
+                                            <p class="quantity-text" id="quantity-starters-item<?php echo $row['item_id'] ?>">0</p>
+                                            <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-starters-item<?php echo $row['item_id'] ?>')">+</button>
                                         </div>
                                     </div>
-                                    <div class="row items veg-items">
-                                        <div class="col-sm-3">
-                                            <center>
-                                                <img src="images/food-images/D2.jpg" class="rounded item-img">
-                                            </center>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <p class="item-name">Item 1</p>
-                                            <div class="item-desc-container">
-                                                <p class="item-desc">(the example of the desc goes here....)</p>
-                                                <select class="item-desc-helper">
-                                                    <option class="item-desc-helper-option">extra cheese</option>
-                                                    <option class="item-desc-helper-option">extra toppings</option>
-                                                    <option class="item-desc-helper-option">salad</option>
-                                                    <option class="item-desc-helper-option">cream salad</option>
-                                                </select>
-                                            </div>
-                                             
-                                                <p class="item-price"> ₹1000 </p>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="quantity-btn-container">
-                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-deserts-item2-reduce-btn" onclick="updateQuantity('quantity-deserts-item2', true)" disabled>-</button>
-                                                <p class="quantity-text" id="quantity-deserts-item2">0</p>
-                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-deserts-item2')">+</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row items veg-items">
-                                        <div class="col-sm-3">
-                                            <center>
-                                                <img src="images/food-images/D3.jpg" class="rounded item-img">
-                                            </center>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <p class="item-name">Item 1</p>
-                                            <div class="item-desc-container">
-                                                <p class="item-desc">(the example of the desc goes here....)</p>
-                                                <select class="item-desc-helper">
-                                                    <option class="item-desc-helper-option">extra cheese</option>
-                                                    <option class="item-desc-helper-option">extra toppings</option>
-                                                    <option class="item-desc-helper-option">salad</option>
-                                                    <option class="item-desc-helper-option">cream salad</option>
-                                                </select>
-                                            </div>
-                                             
-                                                <p class="item-price"> ₹1000 </p>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="quantity-btn-container">
-                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-deserts-item3-reduce-btn" onclick="updateQuantity('quantity-deserts-item3', true)" disabled>-</button>
-                                                <p class="quantity-text" id="quantity-deserts-item3">0</p>
-                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-deserts-item3')">+</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row items veg-items">
-                                        <div class="col-sm-3">
-                                            <center>
-                                                <img src="images/food-images/D4.jpg" class="rounded item-img">
-                                            </center>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <p class="item-name">Item 1</p>
-                                            <div class="item-desc-container">
-                                                <p class="item-desc">(the example of the desc goes here....)</p>
-                                                <select class="item-desc-helper">
-                                                    <option class="item-desc-helper-option">extra cheese</option>
-                                                    <option class="item-desc-helper-option">extra toppings</option>
-                                                    <option class="item-desc-helper-option">salad</option>
-                                                    <option class="item-desc-helper-option">cream salad</option>
-                                                </select>
-                                            </div>
-                                             
-                                                <p class="item-price"> ₹1000 </p>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="quantity-btn-container">
-                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-deserts-item4-reduce-btn" onclick="updateQuantity('quantity-deserts-item4', true)" disabled>-</button>
-                                                <p class="quantity-text" id="quantity-deserts-item4">0</p>
-                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-deserts-item4')">+</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row items veg-items">
-                                        <div class="col-sm-3">
-                                            <center>
-                                                <img src="images/food-images/D5.jpg" class="rounded item-img">
-                                            </center>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <p class="item-name">Item 1</p>
-                                            <div class="item-desc-container">
-                                                <p class="item-desc">(the example of the desc goes here....)</p>
-                                                <select class="item-desc-helper">
-                                                    <option class="item-desc-helper-option">extra cheese</option>
-                                                    <option class="item-desc-helper-option">extra toppings</option>
-                                                    <option class="item-desc-helper-option">salad</option>
-                                                    <option class="item-desc-helper-option">cream salad</option>
-                                                </select>
-                                            </div>
-                                             
-                                                <p class="item-price"> ₹1000 </p>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="quantity-btn-container">
-                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-deserts-item5-reduce-btn" onclick="updateQuantity('quantity-deserts-item5', true)" disabled>-</button>
-                                                <p class="quantity-text" id="quantity-deserts-item5">0</p>
-                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-deserts-item5')">+</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row items veg-items">
-                                        <div class="col-sm-3">
-                                            <center>
-                                                <img src="images/food-images/D6.jpg" class="rounded item-img">
-                                            </center>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <p class="item-name">Item 1</p>
-                                            <div class="item-desc-container">
-                                                <p class="item-desc">(the example of the desc goes here....)</p>
-                                                <select class="item-desc-helper">
-                                                    <option class="item-desc-helper-option">extra cheese</option>
-                                                    <option class="item-desc-helper-option">extra toppings</option>
-                                                    <option class="item-desc-helper-option">salad</option>
-                                                    <option class="item-desc-helper-option">cream salad</option>
-                                                </select>
-                                            </div>
-                                             
-                                                <p class="item-price"> ₹1000 </p>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="quantity-btn-container">
-                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-deserts-item6-reduce-btn" onclick="updateQuantity('quantity-deserts-item6', true)" disabled>-</button>
-                                                <p class="quantity-text" id="quantity-deserts-item6">0</p>
-                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-deserts-item6')">+</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row items veg-items">
-                                        <div class="col-sm-3">
-                                            <center>
-                                                <img src="images/food-images/D7.jpg" class="rounded item-img">
-                                            </center>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <p class="item-name">Item 1</p>
-                                            <div class="item-desc-container">
-                                                <p class="item-desc">(the example of the desc goes here....)</p>
-                                                <select class="item-desc-helper">
-                                                    <option class="item-desc-helper-option">extra cheese</option>
-                                                    <option class="item-desc-helper-option">extra toppings</option>
-                                                    <option class="item-desc-helper-option">salad</option>
-                                                    <option class="item-desc-helper-option">cream salad</option>
-                                                </select>
-                                            </div>
-                                             
-                                                <p class="item-price"> ₹1000 </p>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="quantity-btn-container">
-                                                <button type="button" class="btn btn-danger quantity-btn" id="quantity-deserts-item7-reduce-btn" onclick="updateQuantity('quantity-deserts-item7', true)" disabled>-</button>
-                                                <p class="quantity-text" id="quantity-deserts-item7">0</p>
-                                                <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-deserts-item7')">+</button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                </div>
+                                <?php }
+                            }
+                        ?>
                                 </div>
                             </div>
                         </div>
@@ -780,7 +294,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <center>
-                                <button type="button" class="btn btn-success proceed-button">PROCEED ORDER</button>
+                                <button type="button" class="btn btn-success proceed-button" id="proceed-btn">PROCEED ORDER</button>
                             </center>
                         </div>
                     </div>
