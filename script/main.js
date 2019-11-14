@@ -104,14 +104,9 @@ function getData() {
 
                 $("#proceed-btn").click(function() {
                     var data = getData();
-                        $.ajax({
-                            type: "POST",
-                            url: "http://localhost:8080/Project/app-e-tite/template/review-order.php",
-                            data: JSON.stringify(data),
-                            success: function(result) {
-                                window.location.assign("http://localhost:8080/Project/app-e-tite/template/review-order.php");
-                            }
-                        });
+                    var item_ids = data['item_id'];
+                    var item_quantities = data['item_quantity'];
+                    window.location.assign("http://localhost/Project/app-e-tite/template/review-order.php/?item_ids="+item_ids+"&item_quantities="+item_quantities);
                 });
             });
 
