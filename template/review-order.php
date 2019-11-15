@@ -1,5 +1,5 @@
 <?php
-    $conn = mysqli_connect('localhost', 'root', 'Ankitpal*1828542146', 'appetite');
+    $conn = mysqli_connect('localhost', 'dpankur', 'dpankur07', 'appetite');
     if(isset($_GET['item_ids'])) {
         $data = array();
         $data['item_ids'] = explode(",", $_GET['item_ids']);
@@ -63,7 +63,7 @@
         <link type="text/css" rel="stylesheet" href="../../stylesheets/dark-theme.css">
         <script src="../../script/scripts.js"></script>
         <script src="../../script/main.js"></script>
-        <title>Appetite</title>
+        <title>Review Order</title>
     </head>
     <body>
         
@@ -275,12 +275,12 @@
                     <div class="row">
                         <div class="col-md-6">
                             <center>
-                                <button type="button" class="btn btn-success proceed-button">ADD MORE</button>
+                                <button type="button" class="btn btn-success proceed-button" id="add-more-btn">ADD MORE</button>
                             </center>
                         </div>
                         <div class="col-md-6">
                                 <center>
-                                    <button type="button" class="btn btn-success proceed-button">PLACE ORDER</button>
+                                    <button type="button" class="btn btn-success proceed-button" id="place-order-btn">PLACE ORDER</button>
                                 </center>
                             </div>
                     </div>
