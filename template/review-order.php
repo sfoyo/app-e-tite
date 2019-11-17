@@ -101,12 +101,14 @@
                                             <div class="item-desc-container">
                                                 <p class="item-desc"><?php echo $item['description'] ?></p>
                                                 <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
                                                     <option class="item-desc-helper-option">extra cheese</option>
                                                     <option class="item-desc-helper-option">extra toppings</option>
                                                     <option class="item-desc-helper-option">salad</option>
                                                     <option class="item-desc-helper-option">cream salad</option>
                                                 </select>
                                             </div>
+                                            <p class="item-price">₹<?php echo $row['cost'] ?></p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -138,12 +140,14 @@
                                             <div class="item-desc-container">
                                                 <p class="item-desc"><?php echo $item['description'] ?></p>
                                                 <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
                                                     <option class="item-desc-helper-option">extra cheese</option>
                                                     <option class="item-desc-helper-option">extra toppings</option>
                                                     <option class="item-desc-helper-option">salad</option>
                                                     <option class="item-desc-helper-option">cream salad</option>
                                                 </select>
                                             </div>
+                                            <p class="item-price">₹<?php echo $row['cost'] ?></p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -175,12 +179,14 @@
                                             <div class="item-desc-container">
                                                 <p class="item-desc"><?php echo $item['description'] ?></p>
                                                 <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
                                                     <option class="item-desc-helper-option">extra cheese</option>
                                                     <option class="item-desc-helper-option">extra toppings</option>
                                                     <option class="item-desc-helper-option">salad</option>
                                                     <option class="item-desc-helper-option">cream salad</option>
                                                 </select>
                                             </div>
+                                            <p class="item-price">₹<?php echo $row['cost'] ?></p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -212,12 +218,14 @@
                                             <div class="item-desc-container">
                                                 <p class="item-desc"><?php echo $item['description'] ?></p>
                                                 <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
                                                     <option class="item-desc-helper-option">extra cheese</option>
                                                     <option class="item-desc-helper-option">extra toppings</option>
                                                     <option class="item-desc-helper-option">salad</option>
                                                     <option class="item-desc-helper-option">cream salad</option>
                                                 </select>
                                             </div>
+                                            <p class="item-price">₹<?php echo $row['cost'] ?></p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -249,12 +257,14 @@
                                             <div class="item-desc-container">
                                                 <p class="item-desc"><?php echo $item['description'] ?></p>
                                                 <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
                                                     <option class="item-desc-helper-option">extra cheese</option>
                                                     <option class="item-desc-helper-option">extra toppings</option>
                                                     <option class="item-desc-helper-option">salad</option>
                                                     <option class="item-desc-helper-option">cream salad</option>
                                                 </select>
                                             </div>
+                                            <p class="item-price">₹<?php echo $row['cost'] ?></p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">

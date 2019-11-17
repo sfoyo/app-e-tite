@@ -14,4 +14,12 @@
             mysqli_query($conn, "UPDATE `ordered_items` SET `accepted`=".$_POST['accepted'].", `time`=".$_POST['time']." WHERE `item_id` = ".$_POST['item_id']);
             echo 1;
     }
+    if(isset($_GET['get_time'])) {
+        $query = mysqli_query($conn, "SELECT * FROM `ordered_items`");
+        $data = array();
+        while($row = mysqli_fetch_array($query)) {
+            $data[] = $row['time'];
+        }
+        print_r($data);
+    }
 ?>
