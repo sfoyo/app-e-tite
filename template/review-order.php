@@ -1,5 +1,5 @@
 <?php
-    $conn = mysqli_connect('localhost', 'dpankur', 'dpankur07', 'appetite');
+    $conn = mysqli_connect('localhost', 'root', 'Ankitpal*1828542146', 'appetite');
     if(isset($_GET['item_ids'])) {
         $data = array();
         $data['item_ids'] = explode(",", $_GET['item_ids']);

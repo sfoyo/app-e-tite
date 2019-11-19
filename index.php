@@ -1,10 +1,16 @@
 <?php
-    $conn = mysqli_connect('localhost', 'dpankur', 'dpankur07', 'appetite');
+    $conn = mysqli_connect('localhost', 'root', 'Ankitpal*1828542146', 'appetite');
     $starters = mysqli_query($conn, "select * from menu_items where type = 'food' and sub_type = 'starter'");
     $main_course = mysqli_query($conn, "select * from menu_items where type = 'food' and sub_type = 'main course'");
     $beverages = mysqli_query($conn, "select * from menu_items where type = 'beverage'");
     $drinks = mysqli_query($conn, "select * from menu_items where type = 'drink'");
     $deserts = mysqli_query($conn, "select * from menu_items where type = 'desert'");
+
+    if(isset($_GET['item_ids'])) {
+        $data = array();
+        $data['item_ids'] = explode(",", $_GET['item_ids']);
+        $data['item_quantities'] = explode(",", $_GET['item_quantities']);
+    }
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +52,29 @@
         </header>
        <main>
             <div class="container-fliud">
-                <div class="row" id="menu-btn-container">
+            <div class="row" id="menu-btn-container">
+                            <div class="col-md-3">
+                                <center>
+                                    <button type="button" class="menu-button" id="food-menu-btn-top"><img src="../stylesheets/fontawesome-free-5.11.2-web/svgs/solid/utensils.svg"><span class=""></span></button>
+                                </center>
+                            </div>
+                            <div class="col-md-3">
+                                <center>
+                                    <button type="button" class="menu-button" id="beverages-menu-btn-top"><img src="../stylesheets/fontawesome-free-5.11.2-web/svgs/solid/coffee.svg"><span class=""></span></button>
+                                </center>
+                            </div>
+                            <div class="col-md-3">
+                                <center>
+                                    <button type="button" class="menu-button" id="drinks-menu-btn-top"><img src="../stylesheets/fontawesome-free-5.11.2-web/svgs/solid/glass-martini-alt.svg"><span class=""></span></button>
+                                </center>
+                            </div>
+                            <div class="col-md-3">
+                                <center>
+                                    <button type="button" class="menu-button" id="deserts-menu-btn-top"><img src="../stylesheets/fontawesome-free-5.11.2-web/svgs/solid/ice-cream.svg"><span class=""></span></button>
+                                </center>
+                            </div>
+                        </div>
+                <div class="row">
                     <div class="col-md-3">
                         <center>
                             <button type="button" class="menu-button" id="food-menu-btn"><img src="stylesheets/fontawesome-free-5.11.2-web/svgs/solid/utensils.svg"><span class=""></span></button>
@@ -101,6 +129,7 @@
                                         <div class="item-desc-container">
                                             <p class="item-desc"><?php echo $row['description'] ?></p>
                                             <select class="item-desc-helper">
+                                                <option class="item-desc-helper-option">Add-on</option>
                                                 <option class="item-desc-helper-option">extra cheese</option>
                                                 <option class="item-desc-helper-option">extra toppings</option>
                                                 <option class="item-desc-helper-option">salad</option>
@@ -113,7 +142,16 @@
                                     <div class="col-sm-3">
                                         <div class="quantity-btn-container">
                                             <button type="button" class="btn btn-danger quantity-btn" id="quantity-starters-item<?php echo $row['item_id'] ?>-reduce-btn" onclick="updateQuantity('quantity-starters-item<?php echo $row['item_id'] ?>', true)" disabled>-</button>
-                                            <p class="quantity-text" id="quantity-starters-item<?php echo $row['item_id'] ?>">0</p>
+                                            <p class="quantity-text" id="quantity-starters-item<?php echo $row['item_id'] ?>">
+                                            <?php
+                                                if(in_array($row['item_id'], $data['item_ids'])) {
+                                                    echo $data['item_quantities'][array_search($row['item_id'], $data['item_ids'])];
+                                                }
+                                                else {
+                                                    echo 0;
+                                                }
+                                            ?>
+                                            </p>
                                             <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-starters-item<?php echo $row['item_id'] ?>')">+</button>
                                         </div>
                                     </div>
@@ -142,6 +180,7 @@
                                         <div class="item-desc-container">
                                             <p class="item-desc"><?php echo $row['description'] ?></p>
                                             <select class="item-desc-helper">
+                                                <option class="item-desc-helper-option">Add-on</option>
                                                 <option class="item-desc-helper-option">extra cheese</option>
                                                 <option class="item-desc-helper-option">extra toppings</option>
                                                 <option class="item-desc-helper-option">salad</option>
@@ -154,7 +193,16 @@
                                     <div class="col-sm-3">
                                         <div class="quantity-btn-container">
                                             <button type="button" class="btn btn-danger quantity-btn" id="quantity-starters-item<?php echo $row['item_id'] ?>-reduce-btn" onclick="updateQuantity('quantity-starters-item<?php echo $row['item_id'] ?>', true)" disabled>-</button>
-                                            <p class="quantity-text" id="quantity-starters-item<?php echo $row['item_id'] ?>">0</p>
+                                            <p class="quantity-text" id="quantity-starters-item<?php echo $row['item_id'] ?>">
+                                            <?php
+                                                if(in_array($row['item_id'], $data['item_ids'])) {
+                                                    echo $data['item_quantities'][array_search($row['item_id'], $data['item_ids'])];
+                                                }
+                                                else {
+                                                    echo 0;
+                                                }
+                                            ?>
+                                        </p>
                                             <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-starters-item<?php echo $row['item_id'] ?>')">+</button>
                                         </div>
                                     </div>
@@ -183,6 +231,7 @@
                                         <div class="item-desc-container">
                                             <p class="item-desc"><?php echo $row['description'] ?></p>
                                             <select class="item-desc-helper">
+                                                <option class="item-desc-helper-option">Add-on</option>
                                                 <option class="item-desc-helper-option">extra cheese</option>
                                                 <option class="item-desc-helper-option">extra toppings</option>
                                                 <option class="item-desc-helper-option">salad</option>
@@ -195,7 +244,16 @@
                                     <div class="col-sm-3">
                                         <div class="quantity-btn-container">
                                             <button type="button" class="btn btn-danger quantity-btn" id="quantity-starters-item<?php echo $row['item_id'] ?>-reduce-btn" onclick="updateQuantity('quantity-starters-item<?php echo $row['item_id'] ?>', true)" disabled>-</button>
-                                            <p class="quantity-text" id="quantity-starters-item<?php echo $row['item_id'] ?>">0</p>
+                                            <p class="quantity-text" id="quantity-starters-item<?php echo $row['item_id'] ?>">
+                                            <?php
+                                                if(in_array($row['item_id'], $data['item_ids'])) {
+                                                    echo $data['item_quantities'][array_search($row['item_id'], $data['item_ids'])];
+                                                }
+                                                else {
+                                                    echo 0;
+                                                }
+                                            ?>
+                                        </p>
                                             <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-starters-item<?php echo $row['item_id'] ?>')">+</button>
                                         </div>
                                     </div>
@@ -224,6 +282,7 @@
                                         <div class="item-desc-container">
                                             <p class="item-desc"><?php echo $row['description'] ?></p>
                                             <select class="item-desc-helper">
+                                                <option class="item-desc-helper-option">Add-on</option>
                                                 <option class="item-desc-helper-option">extra cheese</option>
                                                 <option class="item-desc-helper-option">extra toppings</option>
                                                 <option class="item-desc-helper-option">salad</option>
@@ -236,7 +295,16 @@
                                     <div class="col-sm-3">
                                         <div class="quantity-btn-container">
                                             <button type="button" class="btn btn-danger quantity-btn" id="quantity-starters-item<?php echo $row['item_id'] ?>-reduce-btn" onclick="updateQuantity('quantity-starters-item<?php echo $row['item_id'] ?>', true)" disabled>-</button>
-                                            <p class="quantity-text" id="quantity-starters-item<?php echo $row['item_id'] ?>">0</p>
+                                            <p class="quantity-text" id="quantity-starters-item<?php echo $row['item_id'] ?>">
+                                            <?php
+                                                if(in_array($row['item_id'], $data['item_ids'])) {
+                                                    echo $data['item_quantities'][array_search($row['item_id'], $data['item_ids'])];
+                                                }
+                                                else {
+                                                    echo 0;
+                                                }
+                                            ?>
+                                        </p>
                                             <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-starters-item<?php echo $row['item_id'] ?>')">+</button>
                                         </div>
                                     </div>
@@ -265,6 +333,7 @@
                                         <div class="item-desc-container">
                                             <p class="item-desc"><?php echo $row['description'] ?></p>
                                             <select class="item-desc-helper">
+                                                <option class="item-desc-helper-option">Add-on</option>
                                                 <option class="item-desc-helper-option">extra cheese</option>
                                                 <option class="item-desc-helper-option">extra toppings</option>
                                                 <option class="item-desc-helper-option">salad</option>
@@ -277,7 +346,16 @@
                                     <div class="col-sm-3">
                                         <div class="quantity-btn-container">
                                             <button type="button" class="btn btn-danger quantity-btn" id="quantity-starters-item<?php echo $row['item_id'] ?>-reduce-btn" onclick="updateQuantity('quantity-starters-item<?php echo $row['item_id'] ?>', true)" disabled>-</button>
-                                            <p class="quantity-text" id="quantity-starters-item<?php echo $row['item_id'] ?>">0</p>
+                                            <p class="quantity-text" id="quantity-starters-item<?php echo $row['item_id'] ?>">
+                                            <?php
+                                                if(in_array($row['item_id'], $data['item_ids'])) {
+                                                    echo $data['item_quantities'][array_search($row['item_id'], $data['item_ids'])];
+                                                }
+                                                else {
+                                                    echo 0;
+                                                }
+                                            ?>
+                                        </p>
                                             <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-starters-item<?php echo $row['item_id'] ?>')">+</button>
                                         </div>
                                     </div>
@@ -289,7 +367,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div><br><br>
                 <div class="button-container">
                     <div class="row">
                         <div class="col-md-12">

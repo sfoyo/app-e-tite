@@ -56,7 +56,7 @@
             function acceptOrder(id, time, accepted) {
                 $.ajax({
                     type: "POST",
-                    url: "http://localhost:8080/Project/app-e-tite/helper_functions.php",
+                    url: "http://localhost/Project/app-e-tite/helper_functions.php",
                     data: { time: time, accepted: accepted, item_id: id },
                     success: function (result) {
                         if(result) {
@@ -119,23 +119,22 @@ $(document).ready(function () {
         var data = getData();
         var item_ids = data['item_id'];
         var item_quantities = data['item_quantity'];
-        window.location.assign("http://localhost:8080/Project/app-e-tite/template/review-order.php/?item_ids=" + item_ids + "&item_quantities=" + item_quantities);
+        window.location.assign("http://localhost/Project/app-e-tite/template/review-order.php/?item_ids=" + item_ids + "&item_quantities=" + item_quantities);
     });
     $("#add-more-btn").click(function () {
-        /*var data = getData();
+        var data = getData();
         var item_ids = data['item_id'];
         var item_quantities = data['item_quantity'];
-        window.location.assign("http://localhost/Project/app-e-tite/template/review-order.php/?item_ids="+item_ids+"&item_quantities="+item_quantities);*/
-        alert("working");
+        window.location.assign("http://localhost/Project/app-e-tite/?item_ids="+item_ids+"&item_quantities="+item_quantities);
     });
     $("#place-order-btn").click(function () {
         var data = getData();
         $.ajax({
             type: "POST",
-            url: "http://localhost:8080/Project/app-e-tite/helper_functions.php",
+            url: "http://localhost/Project/app-e-tite/helper_functions.php",
             data: { data: data }
         });
-        window.location.assign("http://localhost:8080/Project/app-e-tite/template/after-order-screen.html");
+        window.location.assign("http://localhost/Project/app-e-tite/template/after-order-screen.html");
     });
 
 });
