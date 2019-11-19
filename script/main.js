@@ -57,7 +57,7 @@
                 $.ajax({
                     type: "POST",
                     url: "http://localhost/Project/app-e-tite/helper_functions.php",
-                    data: { time: time, accepted: accepted, item_id: id },
+                    data: { time: time, accepted: accepted, order_no: id },
                     success: function (result) {
                         if(result) {
                             window.location.reload();
@@ -132,9 +132,13 @@ $(document).ready(function () {
         $.ajax({
             type: "POST",
             url: "http://localhost/Project/app-e-tite/helper_functions.php",
-            data: { data: data }
+            data: { data: data },
+            success: function(result) {
+                if(result != null) {
+                    window.location.assign("http://localhost/Project/app-e-tite/template/after-order-screen.php/?order_no="+result);
+                }
+            }
         });
-        window.location.assign("http://localhost/Project/app-e-tite/template/after-order-screen.html");
     });
 
 });

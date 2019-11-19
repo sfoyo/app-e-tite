@@ -283,10 +283,10 @@ hr {
   border-radius: 100%;
   width: 40px;
   height: 40px;
-  box-shadow: 0px 0px 10px 5px #7b716f;
+  box-shadow: 0px 0px 10px 5px #586357;
   background: transparent;
-  color: #81200e;
-  border: 3px solid #81200e;
+  color: #4fa745;
+  border: 3px solid #4fa745;
   display: none;
   position: fixed;
   bottom: 115px;
@@ -372,9 +372,10 @@ hr {
   height: 30px;
   width: 30px;
 }
-.animation {
-  width: 600px;
-  height: 500px;
-  color: red;
-  box-shadow: 0px 0px 21px 26px #7d4221;
+.time {
+  font-size: 50px;
+  color: #4fa745;
+  font-weight: bold;
+  font-family: monospace;
+  margin-bottom: -75px;
 }
