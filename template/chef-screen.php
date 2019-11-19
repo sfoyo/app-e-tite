@@ -68,30 +68,33 @@
                                                     <center><button type="button" class="btn btn-success chef-screen-tick" onclick="removeItem('table-1-item-<?php echo $order['item_id']; ?>')">Done</button></center>
                                                 </div>
                                             </div>
-                                        <?php } else { ?>
+                                        <?php } ?>
+                                    <?php } ?>
                                     <div class="new-order-container">
                                         <div class="row items time-indicator">
                                             <div class="col-sm-3">
                                                 <center>
-                                                    <button type="button" class="btn btn-success" onclick="acceptOrder(<?php echo $order['item_id']; ?>, 5, true)">05:00</button>
+                                                    <button type="button" class="btn btn-success" onclick="acceptOrder(<?php echo $order['order_no']; ?>, 5, true)">05:00</button>
                                                 </center>
                                             </div>
                                             <div class="col-sm-3">
                                                 <center>
-                                                    <button type="button" class="btn btn-success" onclick="acceptOrder(<?php echo $order['item_id']; ?>, 10, true)">10:00</button>
+                                                    <button type="button" class="btn btn-success" onclick="acceptOrder(<?php echo $order['order_no']; ?>, 10, true)">10:00</button>
                                                 </center>
                                             </div>
                                             <div class="col-sm-3">
                                                 <center>
-                                                    <button type="button" class="btn btn-success" onclick="acceptOrder(<?php echo $order['item_id']; ?>, 15, true)">15:00</button>
+                                                    <button type="button" class="btn btn-success" onclick="acceptOrder(<?php echo $order['order_no']; ?>, 15, true)">15:00</button>
                                                 </center>
                                             </div>
                                             <div class="col-sm-3">
                                                 <center>
-                                                    <button type="button" class="btn btn-success" onclick="acceptOrder(<?php echo $order['item_id']; ?>, 20, true)">20:00</button>
+                                                    <button type="button" class="btn btn-success" onclick="acceptOrder(<?php echo $order['order_no']; ?>, 20, true)">20:00</button>
                                                 </center>
                                             </div>
                                         </div>
+                                    <?php foreach($orders as $order) { ?>
+                                        <?php if(!$order['accepted']) { ?>
                                         <div class="row items" id="table-1-item-<?php echo $order['item_id']; ?>">
                                             <div class="col-sm-9">
                                                 <p class="chef-screen-item-name"><?php echo $order['name']; ?></p>
@@ -101,9 +104,9 @@
                                                 <p class="number-of-items"> <b> X <?php echo $order['quantity']; ?></b> </p>
                                             </div>
                                         </div>
-                                    </div>
                                         <?php } ?>
                                     <?php } ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
