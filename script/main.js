@@ -66,6 +66,13 @@
                 });
             }
 
+            function setRating(rate, tab) {
+                $("."+tab).attr("class", "far fa-star "+tab);
+                for(var i = 1; i <= rate; i++) {
+                    $("#"+tab+"-star-"+i).attr("class", "fas fa-star "+tab);
+                }
+            }
+
 $(document).ready(function () {
     var scroll_height = parseInt($("header").css("height")) + parseInt($(".veg-only-btn-container").css("height")) - parseInt($("#menu-btn-container").css("height"));
     var food_scroll_height = scroll_height;

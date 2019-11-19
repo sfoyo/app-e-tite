@@ -1,39 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap-grid.css">
-        <link rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap-grid.min.css">
-        <link rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap-reboot.css">
-        <link rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap-reboot.min.css">
-        <link rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap.css">
-        <link rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../stylesheets/fontawesome-free-5.11.2-web/css/solid.css">
-        <link rel="stylesheet" href="../stylesheets/fontawesome-free-5.11.2-web/css/solid.min.css">
-        <link rel="stylesheet" href="../stylesheets/fontawesome-free-5.11.2-web/css/svg-with-js.css">
-        <link rel="stylesheet" href="../stylesheets/fontawesome-free-5.11.2-web/css/svg-with-js.min.css">
-        <link rel="stylesheet" href="../stylesheets/fontawesome-free-5.11.2-web/css/v4-shims.css">
-        <link rel="stylesheet" href="../stylesheets/fontawesome-free-5.11.2-web/css/v4-shims.min.css">
-
-        <script src="../stylesheets/bootstrap-4.3.1-dist/js/bootstrap.bundle.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"></script>
-        <script src="../stylesheets/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"></script>
-        <script src="../stylesheets/bootstrap-4.3.1-dist/js/bootstrap.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"></script>
-        <script src="../stylesheets/bootstrap-4.3.1-dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"></script>
-        <script src="../stylesheets/fontawesome-free-5.11.2-web/js/regular.js"></script>
-        <script src="../stylesheets/fontawesome-free-5.11.2-web/js/regular.min.js"></script>
-        <script src="../stylesheets/fontawesome-free-5.11.2-web/js/solid.js"></script>
-        <script src="../stylesheets/fontawesome-free-5.11.2-web/js/solid.min.js"></script>
-        <script src="../stylesheets/fontawesome-free-5.11.2-web/js/v4-shims.js"></script>
-        <script src="../stylesheets/fontawesome-free-5.11.2-web/js/v4-shims.min.js"></script>
-        <link type="text/css" rel="stylesheet" href="../stylesheets/dark-theme.css">
-        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-        <script src="../script/scripts.js"></script>
-        <script src="../script/main.js"></script>
-        <title>Rating</title>
-    </head>
+        <head>
+                <meta charset="UTF-8">
+                <link rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap-grid.css">
+                <link rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap-grid.min.css">
+                <link rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap-reboot.css">
+                <link rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap-reboot.min.css">
+                <link rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap.css">
+                <link rel="stylesheet" href="../stylesheets/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+                <link rel="stylesheet" href="../stylesheets/fontawesome-free-5.11.2-web/css/all.css">
+                <script src="../stylesheets/bootstrap-4.3.1-dist/js/bootstrap.bundle.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"></script>
+                <script src="../stylesheets/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"></script>
+                <script src="../stylesheets/bootstrap-4.3.1-dist/js/bootstrap.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"></script>
+                <script src="../stylesheets/bootstrap-4.3.1-dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"></script>
+                <script src="../stylesheets/fontawesome-free-5.11.2-web/js/all.js"></script>
+                <script src="../script/jquery/jquery.js"></script>
+                <link type="text/css" rel="stylesheet" href="../stylesheets/dark-theme.css">
+                <script src="../script/scripts.js"></script>
+                <script src="../script/main.js"></script>
+                <title>Rating</title>
+            </head>
     <body>
-        
-       
         <header>
             <div class="container-fluid">
                 <div class="row">
@@ -72,12 +59,12 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <center>
-                                        <div class="star-container">
-                                            <span class="far fa-star" onclick="rate('food-rating-1')"></span>
-                                            <span class="far fa-star" onclick="rate('food-rating-2')"></span>
-                                            <span class="far fa-star" onclick="rate('food-rating-3')"></span>
-                                            <span class="far fa-star" onclick="rate('food-rating-4')"></span>
-                                            <span class="far fa-star" onclick="rate('food-rating-5')"></span>
+                                        <div class="stars star-container">
+                                            <span class="far fa-star food" id="food-star-1" onclick="setRating(1,'food')"></span>
+                                            <span class="far fa-star food" id="food-star-2" onclick="setRating(2,'food')"></span>
+                                            <span class="far fa-star food" id="food-star-3" onclick="setRating(3,'food')"></span>
+                                            <span class="far fa-star food" id="food-star-4" onclick="setRating(4,'food')"></span>
+                                            <span class="far fa-star food" id="food-star-5" onclick="setRating(5,'food')"></span>
                                         </div>
                                     </center>
                                 </div>
@@ -101,13 +88,13 @@
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <center>
-                                            <div class="star-container">
-                                                <span class="far fa-star"></span>
-                                                <span class="far fa-star"></span>
-                                                <span class="far fa-star"></span>
-                                                <span class="far fa-star"></span>
-                                                <span class="far fa-star"></span>
-                                            </div>
+                                            <div class="stars star-container">
+                                            <span class="far fa-star app" id="app-star-1" onclick="setRating(1,'app')"></span>
+                                            <span class="far fa-star app" id="app-star-2" onclick="setRating(2,'app')"></span>
+                                            <span class="far fa-star app" id="app-star-3" onclick="setRating(3,'app')"></span>
+                                            <span class="far fa-star app" id="app-star-4" onclick="setRating(4,'app')"></span>
+                                            <span class="far fa-star app" id="app-star-5" onclick="setRating(5,'app')"></span>
+                                        </div>
                                         </center>
                                     </div>
                                 </div>
@@ -134,13 +121,8 @@
                     </div>
                 </div>
             </footer>
-            <script>
-                function rate(id) {
-                    var rating = parseInt(id);
-                    for(i = 0; i < rating; i++) {
-                        $("#food-rating-"+id).prop("class", "fas fa-star");
-                    }
-                }
-            </script>
+
+        
+
         </body>
         </html>

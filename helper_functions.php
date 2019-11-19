@@ -1,5 +1,5 @@
 <?php
-    $conn = mysqli_connect('localhost', 'root', 'Ankitpal*1828542146', 'appetite');
+    $conn = mysqli_connect('localhost', 'dpankur', 'dpankur07', 'appetite');
     if(isset($_POST['data'])) {
         $data = $_POST['data'];
 

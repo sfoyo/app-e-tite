@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $conn = mysqli_connect('localhost', 'root', 'Ankitpal*1828542146', 'appetite');
+    $conn = mysqli_connect('localhost', 'dpankur', 'dpankur07', 'appetite');
 
     $orders = array();
     $items = mysqli_query($conn, "SELECT * FROM `ordered_items`");
