@@ -55,22 +55,22 @@
             <div class="row" id="menu-btn-container">
                             <div class="col-md-3">
                                 <center>
-                                    <button type="button" class="menu-button" id="food-menu-btn-top"><img src="../stylesheets/fontawesome-free-5.11.2-web/svgs/solid/utensils.svg"><span class=""></span></button>
+                                    <button type="button" class="menu-button" id="food-menu-btn-top"><img src="stylesheets/fontawesome-free-5.11.2-web/svgs/solid/utensils.svg"><span class=""></span></button>
                                 </center>
                             </div>
                             <div class="col-md-3">
                                 <center>
-                                    <button type="button" class="menu-button" id="beverages-menu-btn-top"><img src="../stylesheets/fontawesome-free-5.11.2-web/svgs/solid/coffee.svg"><span class=""></span></button>
+                                    <button type="button" class="menu-button" id="beverages-menu-btn-top"><img src="stylesheets/fontawesome-free-5.11.2-web/svgs/solid/coffee.svg"><span class=""></span></button>
                                 </center>
                             </div>
                             <div class="col-md-3">
                                 <center>
-                                    <button type="button" class="menu-button" id="drinks-menu-btn-top"><img src="../stylesheets/fontawesome-free-5.11.2-web/svgs/solid/glass-martini-alt.svg"><span class=""></span></button>
+                                    <button type="button" class="menu-button" id="drinks-menu-btn-top"><img src="stylesheets/fontawesome-free-5.11.2-web/svgs/solid/glass-martini-alt.svg"><span class=""></span></button>
                                 </center>
                             </div>
                             <div class="col-md-3">
                                 <center>
-                                    <button type="button" class="menu-button" id="deserts-menu-btn-top"><img src="../stylesheets/fontawesome-free-5.11.2-web/svgs/solid/ice-cream.svg"><span class=""></span></button>
+                                    <button type="button" class="menu-button" id="deserts-menu-btn-top"><img src="stylesheets/fontawesome-free-5.11.2-web/svgs/solid/ice-cream.svg"><span class=""></span></button>
                                 </center>
                             </div>
                         </div>
@@ -144,7 +144,7 @@
                                             <button type="button" class="btn btn-danger quantity-btn" id="quantity-starters-item<?php echo $row['item_id'] ?>-reduce-btn" onclick="updateQuantity('quantity-starters-item<?php echo $row['item_id'] ?>', true)" disabled>-</button>
                                             <p class="quantity-text" id="quantity-starters-item<?php echo $row['item_id'] ?>">
                                             <?php
-                                                if(in_array($row['item_id'], $data['item_ids'])) {
+                                                if(isset($data) && in_array($row['item_id'], $data['item_ids'])) {
                                                     echo $data['item_quantities'][array_search($row['item_id'], $data['item_ids'])];
                                                 }
                                                 else {
@@ -195,7 +195,7 @@
                                             <button type="button" class="btn btn-danger quantity-btn" id="quantity-starters-item<?php echo $row['item_id'] ?>-reduce-btn" onclick="updateQuantity('quantity-starters-item<?php echo $row['item_id'] ?>', true)" disabled>-</button>
                                             <p class="quantity-text" id="quantity-starters-item<?php echo $row['item_id'] ?>">
                                             <?php
-                                                if(in_array($row['item_id'], $data['item_ids'])) {
+                                                if(isset($data) && in_array($row['item_id'], $data['item_ids'])) {
                                                     echo $data['item_quantities'][array_search($row['item_id'], $data['item_ids'])];
                                                 }
                                                 else {
@@ -246,7 +246,7 @@
                                             <button type="button" class="btn btn-danger quantity-btn" id="quantity-starters-item<?php echo $row['item_id'] ?>-reduce-btn" onclick="updateQuantity('quantity-starters-item<?php echo $row['item_id'] ?>', true)" disabled>-</button>
                                             <p class="quantity-text" id="quantity-starters-item<?php echo $row['item_id'] ?>">
                                             <?php
-                                                if(in_array($row['item_id'], $data['item_ids'])) {
+                                                if(isset($data) && in_array($row['item_id'], $data['item_ids'])) {
                                                     echo $data['item_quantities'][array_search($row['item_id'], $data['item_ids'])];
                                                 }
                                                 else {
@@ -297,7 +297,7 @@
                                             <button type="button" class="btn btn-danger quantity-btn" id="quantity-starters-item<?php echo $row['item_id'] ?>-reduce-btn" onclick="updateQuantity('quantity-starters-item<?php echo $row['item_id'] ?>', true)" disabled>-</button>
                                             <p class="quantity-text" id="quantity-starters-item<?php echo $row['item_id'] ?>">
                                             <?php
-                                                if(in_array($row['item_id'], $data['item_ids'])) {
+                                                if(isset($data) && in_array($row['item_id'], $data['item_ids'])) {
                                                     echo $data['item_quantities'][array_search($row['item_id'], $data['item_ids'])];
                                                 }
                                                 else {
@@ -348,7 +348,7 @@
                                             <button type="button" class="btn btn-danger quantity-btn" id="quantity-starters-item<?php echo $row['item_id'] ?>-reduce-btn" onclick="updateQuantity('quantity-starters-item<?php echo $row['item_id'] ?>', true)" disabled>-</button>
                                             <p class="quantity-text" id="quantity-starters-item<?php echo $row['item_id'] ?>">
                                             <?php
-                                                if(in_array($row['item_id'], $data['item_ids'])) {
+                                                if(isset($data) && in_array($row['item_id'], $data['item_ids'])) {
                                                     echo $data['item_quantities'][array_search($row['item_id'], $data['item_ids'])];
                                                 }
                                                 else {
