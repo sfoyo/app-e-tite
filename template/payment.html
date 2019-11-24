@@ -30,7 +30,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <center>
-                            <img src="../images/background-images/bg4.png">
+                            <img src="../images/logo2.png">
                         </center>
                     </div>
                 </div>
@@ -71,7 +71,9 @@
                     <div class="row">
                         <div class="col-md-12">
                             <center>
-                                <button type="button" class="btn btn-success proceed-button">PAY </button>
+                                <form action="http://localhost/Project/app-e-tite/template/rating.html" method="POST">
+                                    <button type="submit" class="btn btn-success proceed-button">PAY </button>
+                                </form>
                             </center>
                         </div>
                     </div>
@@ -90,7 +92,15 @@
         <script>
             function selectPaymentMethod(id) {
                 $("#"+id).prop("checked", true);
+                $(".payment-method-icon").css({"border":"10px solid #2f4e4f", "color":"#2f4e4f", "box-shadow":"15px 15px 25px 10px #2f4e4f"});
+                $("#"+id+"-container div").css({"border":"10px solid #a1822b", "color":"#a1822b", "box-shadow":"5px 5px 8px 0px #a1822b"});
             }
         </script>
+        <script>
+                $(document).ready(function() {
+                    var section_height = (parseInt($(window).height()) - parseInt($("header").css("height")) - parseInt($(".pay-with").css("height")) - parseInt($(".payment-method-container").css("height")) - parseInt($(".payment-method-container").css("height")) - parseInt($(".button-container").css("height"))) / 4;
+                    $(".payment-method-container").css("padding", section_height+"px 0px");
+                });
+            </script>
     </body>
 </html>

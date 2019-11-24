@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $conn = mysqli_connect('localhost', 'dpankur', 'dpankur07', 'appetite');
+    $conn = mysqli_connect('localhost', 'root', 'Ankitpal*1828542146', 'appetite');
 
     $orders = array();
     $items = mysqli_query($conn, "SELECT * FROM `ordered_items`");
@@ -56,7 +56,7 @@
                                 <div class="container-fluid">
                                     <?php foreach($orders as $order) { ?>
                                         <?php if($order['accepted']) { ?>
-                                            <div class="row items" id="table-1-item-<?php echo $order['item_id']; ?>">
+                                            <div class="row items" id="table-1-item-<?php echo $order['item_id'].'-order-'.$order['order_no']; ?>">
                                                 <div class="col-sm-8">
                                                     <p class="chef-screen-item-name"><?php echo $order['name']; ?></p>
                                                     <p class="special-request">special requests:  <?php echo $order['special_instructions']; ?></p>
@@ -65,11 +65,16 @@
                                                     <p class="number-of-items"> <b> X <?php echo $order['quantity']; ?></b> </p>
                                                 </div>
                                                 <div class="col-sm-2">
-                                                    <center><button type="button" class="btn btn-success chef-screen-tick" onclick="removeItem('table-1-item-<?php echo $order['item_id']; ?>')">Done</button></center>
+                                                    <center><button type="button" class="btn btn-success chef-screen-tick" onclick="removeItem('table-1-item-<?php echo $order['item_id'].'-order-'.$order['order_no']; ?>', '<?php echo $order['ordered_items_id']; ?>')">Done</button></center>
                                                 </div>
                                             </div>
                                         <?php } ?>
                                     <?php } ?>
+                                    <?php foreach($orders as $order) { ?>
+                                    <?php if(!$order['accepted']) { ?>
+                                    <?php if($order['order_no'] != $current_order) {
+                                        $current_order = $order['order_no'];
+                                    ?>
                                     <div class="new-order-container">
                                         <div class="row items time-indicator">
                                             <div class="col-sm-3">
@@ -93,9 +98,8 @@
                                                 </center>
                                             </div>
                                         </div>
-                                    <?php foreach($orders as $order) { ?>
-                                        <?php if(!$order['accepted']) { ?>
-                                        <div class="row items" id="table-1-item-<?php echo $order['item_id']; ?>">
+                                        <?php } ?>
+                                        <div class="row items" id="table-1-item-<?php echo $order['item_id'].'-order-'.$order['order_no']; ?>">
                                             <div class="col-sm-9">
                                                 <p class="chef-screen-item-name"><?php echo $order['name']; ?></p>
                                                 <p class="special-request">special requests:  <?php echo $order['special_instructions']; ?></p>

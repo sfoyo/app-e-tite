@@ -321,30 +321,19 @@ hr {
   padding: 15px 0px;
 }
 
-.payment-method-container {
-  padding: 30px 0px;
-  margin: 70px 0px;
-}
-
 .payment-method {
   display: none;
 }
 
 .payment-method-icon {
-  font-size: 340px;
+  font-size: 260px;
     color: #2f4e4f;
      border: 10px solid #2f4e4f;
      box-shadow: 15px 15px 25px 10px #2f4e4f; 
     border-radius: 31px;
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     background: url('../images/logo-images/background-images/.bg4.jpeg');
-}
-
-.payment-method-icon:hover {
-  border: 10px solid #a1822b; 
-  color: #a1822b;
-  box-shadow: 5px 5px 8px 0px #a1822b; 
 }
 
 .item-price {
@@ -400,4 +389,8 @@ hr {
   font-weight: bold;
   font-family: monospace;
   margin-bottom: -75px;
+}
+.mySlides {
+  transform: rotate(90deg);
+  height: 1000px;
 }

@@ -1,5 +1,5 @@
 <?php
-    $conn = mysqli_connect('localhost', 'dpankur', 'dpankur07', 'appetite');
+    $conn = mysqli_connect('localhost', 'root', 'Ankitpal*1828542146', 'appetite');
     if(isset($_POST['data'])) {
         $data = $_POST['data'];
 
@@ -14,13 +14,16 @@
         echo $order_no;
     }
     if(isset($_POST['time'])) {
-            mysqli_query($conn, "UPDATE `ordered_items` SET `accepted`=".$_POST['accepted'].", `time`=".$_POST['time']." WHERE `order_no` = ".$_POST['order_no']);
-            echo 1;
+        mysqli_query($conn, "UPDATE `ordered_items` SET `accepted`=".$_POST['accepted'].", `time`=".$_POST['time']." WHERE `order_no` = ".$_POST['order_no']);
+        echo 1;
     }
     if(isset($_GET['order_no'])) {
-        $query = mysqli_query($conn, "SELECT * FROM `ordered_items` WHERE `order_no` = ".$_GET['order_no']);
+        $query = mysqli_query($conn, "SELECT * FROM `ordered_items` WHERE `order_no` = ".$_GET['order_no']." order by `time` desc");
         $row = mysqli_fetch_array($query);
         $data = $row['time'];
         echo json_encode($data);
+    }
+    if(isset($_POST['ordered_items_id'])) {
+        mysqli_query($conn, "UPDATE `ordered_items` SET `time`= null WHERE `ordered_items_id` = ".$_POST['ordered_items_id']);
     }
 ?>

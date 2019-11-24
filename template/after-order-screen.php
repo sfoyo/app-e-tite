@@ -103,6 +103,9 @@
                         success: function(result) {
                             var data = JSON.parse(result);
                             $(".time").text(data+":00");
+                            if(data == null) {
+                                window.location.assign("http://localhost/Project/app-e-tite/template/payment.html");
+                            }
                         }
                     });
                    }, 1000);

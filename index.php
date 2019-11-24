@@ -1,5 +1,5 @@
 <?php
-    $conn = mysqli_connect('localhost', 'dpankur', 'dpankur07', 'appetite');
+    $conn = mysqli_connect('localhost', 'root', 'Ankitpal*1828542146', 'appetite');
     $starters = mysqli_query($conn, "select * from menu_items where type = 'food' and sub_type = 'starter'");
     $main_course = mysqli_query($conn, "select * from menu_items where type = 'food' and sub_type = 'main course'");
     $beverages = mysqli_query($conn, "select * from menu_items where type = 'beverage'");

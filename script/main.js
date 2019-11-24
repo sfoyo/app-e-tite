@@ -34,8 +34,13 @@
                 $("html,body").animate({scrollTop:position}, 800, 'swing');
             }
 
-            function removeItem(id) {
+            function removeItem(id, ordered_items_id) {
                 $("#"+id).toggle("fast");
+                $.ajax({
+                    type: "POST",
+                    url: "http://localhost/Project/app-e-tite/helper_functions.php",
+                    data: {ordered_items_id: ordered_items_id}
+                });
             }
 
             function getData() {

@@ -105,7 +105,9 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <center>
-                                        <button type="button" class="btn btn-success proceed-button">SUBMIT</button>
+                                        <form action="http://localhost/Project/app-e-tite/template/screen-saver.html" method="POST">
+                                            <button type="submit" class="btn btn-success proceed-button">SUBMIT</button>
+                                        </form>
                                     </center>
                                 </div>
                             </div>
@@ -121,7 +123,16 @@
                     </div>
                 </div>
             </footer>
+<script>
+    $(document).ready(function() {
+        var section_height = (parseInt($(window).height()) - parseInt($("header").css("height")) - parseInt($(".page-heading").css("height")) - parseInt($(".section").css("height"))) / 4;
+        $(".section").css("padding", section_height+"px 0px");
 
+        setInterval(function() {
+            window.location.assign("http://localhost/Project/app-e-tite/screen-saver.html");
+        }, 30000);
+    });
+</script>
         
 
         </body>
