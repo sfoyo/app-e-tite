@@ -17,6 +17,7 @@
         <script src="../script/jquery/jquery.js"></script>
         <link type="text/css" rel="stylesheet" href="../stylesheets/dark-theme.css">
         <script src="../script/scripts.js"></script>
+        <script src="../script/main.js"></script>
         <title>Appetite</title>
     </head>
     <body>
@@ -36,7 +37,31 @@
         </header>
        <main>
             <div class="container-fliud">
-                <div class="row" id="menu-btn-container">
+
+                    <div class="row" id="menu-btn-container">
+                            <div class="col-md-3">
+                                <center>
+                                    <button type="button" class="menu-button" id="food-menu-btn-top"><img src="../stylesheets/fontawesome-free-5.11.2-web/svgs/solid/utensils.svg"><span class=""></span></button>
+                                </center>
+                            </div>
+                            <div class="col-md-3">
+                                <center>
+                                    <button type="button" class="menu-button" id="beverages-menu-btn-top"><img src="../stylesheets/fontawesome-free-5.11.2-web/svgs/solid/coffee.svg"><span class=""></span></button>
+                                </center>
+                            </div>
+                            <div class="col-md-3">
+                                <center>
+                                    <button type="button" class="menu-button" id="drinks-menu-btn-top"><img src="../stylesheets/fontawesome-free-5.11.2-web/svgs/solid/glass-martini-alt.svg"><span class=""></span></button>
+                                </center>
+                            </div>
+                            <div class="col-md-3">
+                                <center>
+                                    <button type="button" class="menu-button" id="deserts-menu-btn-top"><img src="../stylesheets/fontawesome-free-5.11.2-web/svgs/solid/ice-cream.svg"><span class=""></span></button>
+                                </center>
+                            </div>
+                        </div>
+
+                <div class="row">
                     <div class="col-md-3">
                         <center>
                             <button type="button" class="menu-button" id="food-menu-btn"><img src="../stylesheets/fontawesome-free-5.11.2-web/svgs/solid/utensils.svg"><span class=""></span></button>
@@ -74,7 +99,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card submenu-container">
-                            <p class="card-heading submenu-heading" onclick="collapseMenuCards('submenu-heading-1')"><span class="">+</span> Starters</p>
+                            <p class="card-heading submenu-heading" onclick="collapseMenuCards('submenu-heading-1')"><span class="fas fa-minus" id="submenu-heading-1-icon"></span> Starters</p>
                             <div class="items-container"  id="submenu-heading-1">
                                 <div class="container-fluid">
                                     <div class="row items veg-items">
@@ -85,7 +110,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Burger</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -103,7 +139,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Fries</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -121,7 +168,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Pasta</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -139,7 +197,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Momos</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -157,7 +226,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Biscuit</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -175,7 +255,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Chicken</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -193,7 +284,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Samosa</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -207,7 +309,7 @@
                             </div>
                         </div>
                         <div class="card submenu-container">
-                            <p class="card-heading submenu-heading" onclick="collapseMenuCards('submenu-heading-2')"><span class="">+</span> Main Course</p>
+                            <p class="card-heading submenu-heading" onclick="collapseMenuCards('submenu-heading-2')"><span class="fas fa-minus" id="submenu-heading-2-icon"></span> Main Course</p>
                             <div class="items-container" id="submenu-heading-2">
                                 <div class="container-fluid">
                                     <div class="row items veg-items">
@@ -218,7 +320,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Item 1</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -236,7 +349,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Item 1</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -254,7 +378,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Item 1</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -272,7 +407,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Item 1</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -290,7 +436,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Item 1</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -308,7 +465,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Item 1</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -326,10 +494,16 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Item 1</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="quantity-btn-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
                                                 <button type="button" class="btn btn-danger quantity-btn" id="quantity-maincourse-item7-reduce-btn" onclick="updateQuantity('quantity-maincourse-item7', true)" disabled>-</button>
                                                 <p class="quantity-text" id="quantity-maincourse-item7">0</p>
                                                 <button type="button" class="btn btn-danger quantity-btn" onclick="updateQuantity('quantity-maincourse-item7')">+</button>
@@ -340,7 +514,7 @@
                             </div>
                         </div>
                         <div class="card submenu-container">
-                            <p class="card-heading submenu-heading" onclick="collapseMenuCards('submenu-heading-3')"><span class="">+</span> Beverages</p>
+                            <p class="card-heading submenu-heading" onclick="collapseMenuCards('submenu-heading-3')"><span class="fas fa-minus" id="submenu-heading-3-icon"></span> Beverages</p>
                             <div class="items-container" id="submenu-heading-3">
                                 <div class="container-fluid">
                                     <div class="row items veg-items">
@@ -351,7 +525,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Item 1</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -369,7 +554,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Item 1</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -387,7 +583,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Item 1</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -405,7 +612,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Item 1</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -423,7 +641,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Item 1</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -441,7 +670,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Item 1</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -459,7 +699,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Item 1</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -473,7 +724,7 @@
                             </div>
                         </div>
                         <div class="card submenu-container">
-                            <p class="card-heading submenu-heading" onclick="collapseMenuCards('submenu-heading-4')"><span class="">+</span> Drinks</p>
+                            <p class="card-heading submenu-heading" onclick="collapseMenuCards('submenu-heading-4')"><span class="fas fa-minus" id="submenu-heading-4-icon"></span> Drinks</p>
                             <div class="items-container" id="submenu-heading-4">
                                 <div class="container-fluid">
                                     <div class="row items veg-items">
@@ -484,7 +735,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Item 1</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -502,7 +764,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Item 1</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -520,7 +793,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Item 1</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -538,7 +822,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Item 1</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -556,7 +851,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Item 1</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -574,7 +880,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Item 1</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -592,7 +909,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Item 1</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -606,7 +934,7 @@
                             </div>
                         </div>
                         <div class="card submenu-container">
-                            <p class="card-heading submenu-heading" onclick="collapseMenuCards('submenu-heading-5')"><span class="">+</span> Deserts</p>
+                            <p class="card-heading submenu-heading" onclick="collapseMenuCards('submenu-heading-5')"><span class="fas fa-minus" id="submenu-heading-5-icon"></span> Deserts</p>
                             <div class="items-container" id="submenu-heading-5">
                                 <div class="container-fluid">
                                     <div class="row items veg-items">
@@ -617,7 +945,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Item 1</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -635,7 +974,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Item 1</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -653,7 +1003,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Item 1</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -671,7 +1032,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Item 1</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -689,7 +1061,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Item 1</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -707,7 +1090,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Item 1</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -725,7 +1119,18 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="item-name">Item 1</p>
-                                            <p class="item-desc">(the example of the desc goes here....)</p>
+                                            <div class="item-desc-container">
+                                                <p class="item-desc">(the example of the desc goes here....)</p>
+                                                <select class="item-desc-helper">
+                                                    <option class="item-desc-helper-option">Add-on</option>
+                                                    <option class="item-desc-helper-option">extra cheese</option>
+                                                    <option class="item-desc-helper-option">extra toppings</option>
+                                                    <option class="item-desc-helper-option">salad</option>
+                                                    <option class="item-desc-helper-option">cream salad</option>
+                                                </select>
+                                            </div>
+                                             
+                                                <p class="item-price"> ₹1000 </p>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="quantity-btn-container">
@@ -744,7 +1149,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <center>
-                                <button type="button" class="btn btn-success proceed-button">PROCEED ORDER</button>
+                                <button onclick="myFunction()" type="button" class="btn btn-success proceed-button">PROCEED ORDER</button>
                             </center>
                         </div>
                     </div>
@@ -753,84 +1158,13 @@
         </main>
         <footer>
             <div class="container-fluid">
-                <div class="row">
+                <div class="row" id="foot">
                     <div class="col-md-12">
                         <p>Powered by: SFOYO</p>
                     </div>
                 </div>
             </div>
         </footer>
-
-
-        <script>
-            function displayVegOnly() {
-                $(".non-veg-items").toggle("fast");
-            }
-
-            function collapseMenuCards(id) {
-                $("#"+id).slideToggle(250);
-            }
-
-            function updateQuantity(id, reduce=false) {
-                var current_quantity = $("#"+id).text();
-                if(reduce) {
-                    $("#"+id).text(parseInt(current_quantity)-1);
-                    if($("#"+id).text() != 0) {
-                        $("#"+id+"-reduce-btn").prop("disabled" ,false);
-                    }
-                    else {
-                        $("#"+id+"-reduce-btn").prop("disabled" ,true);
-                    }
-                }
-                else {
-                    $("#"+id).text(parseInt(current_quantity)+1);
-                    $("#"+id+"-reduce-btn").prop("disabled" ,false);
-                }
-            }
-
-            function scrollToPosition(position) {
-                $("html,body").animate({scrollTop:position}, 800, 'swing');
-            }
-
-            $(document).ready(function() {
-                var scroll_height = parseInt($("header").css("height")) + parseInt($(".veg-only-btn-container").css("height"));
-                var food_scroll_height = scroll_height;
-                var beverages_scroll_height = food_scroll_height + parseInt($("#submenu-heading-1").css("height")) + parseInt($("#submenu-heading-2").css("height")) + parseInt($(".submenu-heading").css("height")) + parseInt($(".submenu-heading").css("height"));
-                var drinks_scroll_height = beverages_scroll_height + parseInt($("#submenu-heading-3").css("height")) + parseInt($(".submenu-heading").css("height"));
-                var deserts_scroll_height =  drinks_scroll_height + parseInt($("#submenu-heading-4").css("height")) + parseInt($(".submenu-heading").css("height"));
-                $(document).scroll(function() {
-                    var scroll_position = $(document).scrollTop();
-                    if(scroll_position > 280) {
-                        $("#scroll-btn").fadeIn("fast");
-                    }
-                    else {
-                        $("#scroll-btn").fadeOut("fast");
-                    }
-                    if(scroll_position > parseInt($("header").css("height"))) {
-                        $("#menu-btn-container").css({"position": "fixed", "width": "100%", "top": "0px", "padding": "10px 0px", "z-index": "1000", "background-image": "url('../images/background-images/bg4.jpeg')"});
-                        $(".menu-button img").css({"width": "30px", "height": "30px"});
-                    }
-                    else {
-                        $("#menu-btn-container").css({"position": "unset", "width": "100%", "top": "0px", "padding": "0px", "z-index": "0", "background-image": "url()"});
-                        $(".menu-button img").css({"width": "40px", "height": "40px"});
-                    }
-                });
-                $("#scroll-btn").click(function() {
-                    scrollToPosition(0);
-                });
-                $("#food-menu-btn").click(function() {
-                    scrollToPosition(food_scroll_height);
-                });
-                $("#beverages-menu-btn").click(function() {
-                    scrollToPosition(beverages_scroll_height);
-                });
-                $("#drinks-menu-btn").click(function() {
-                    scrollToPosition(drinks_scroll_height);
-                });
-                $("#deserts-menu-btn").click(function() {
-                    scrollToPosition(deserts_scroll_height);
-                });
-            });
-        </script>
+        
     </body>
 </html>
